@@ -11,7 +11,9 @@ function App() {
 
   return (
     <div className="App">
+            <h1>Reminiscent</h1>
     </div>
+
   );
 }
 
