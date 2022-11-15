@@ -2,9 +2,6 @@ import Candles from "./Candles";
 import { useEffect, useState } from 'react'
 
 function Home() {
-
-
-    console.log("hello from home")
     const [candleArr, setCandleArr] = useState([])
 
     useEffect(() => {

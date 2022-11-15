@@ -12,7 +12,7 @@ function CandleContainer({ candleArr }) {
 
     return (
 
-        <div className="card">
+        <div>
             {allCandles}
         </div>
     )

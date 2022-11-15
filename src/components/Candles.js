@@ -3,7 +3,7 @@ import CreateCandle from "./CreateCandle";
 import { useState, useEffect } from 'react'
 
 function Candles({ candleArr }) {
-    console.log("hello from Candles")
+
     const [scentData, setScentData] = useState([])
     const [newCandle, setNewCandle] = useState({})
 
@@ -17,7 +17,8 @@ function Candles({ candleArr }) {
             body: JSON.stringify({
                 name: name,
                 price: 20,
-                image: "candle.jpeg"
+                image: "candle.jpeg",
+                scents: scents
             })
         })
             .then(resp => resp.json())
