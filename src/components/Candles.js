@@ -5,6 +5,27 @@ import {useState, useEffect} from 'react'
 function Candles ({candleArr}) {
     console.log("hello from Candles")
     const [scentData, setScentData] = useState([])
+    const [newCandle, setNewCandle] = useState({})
+
+
+    function onCandleFormSubmit(name, scents) {
+        console.log("submitted")
+        console.log(name, scents)
+        fetch('http://localhost:9292/candles', {
+            method: 'POST',
+            headers: {'content-type': 'application/json'},
+            body: JSON.stringify({
+                name: name,
+                price: 20,
+                image: "candle.jpeg"
+            })
+        })
+        .then(resp => resp.json())
+        .then(data => {
+            console.log(data)
+            setNewCandle(data)
+        })
+    }
 
 
   useEffect(() => {
@@ -12,14 +33,13 @@ function Candles ({candleArr}) {
     .then(res => res.json())
     .then(data => {
         setScentData(data)
-        console.log(scentData)
     })
   },[])
 
 
     return (
         <div>
-        <CreateCandle scentData={scentData}/>
+        <CreateCandle scentData={scentData} handleSubmit={onCandleFormSubmit}/>
         <CandleContainer candleArr={candleArr}/>
         </div>
     )
