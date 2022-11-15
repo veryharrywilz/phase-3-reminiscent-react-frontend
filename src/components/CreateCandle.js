@@ -1,6 +1,6 @@
 import React, {useEffect, useState} from 'react'
 
-function CreateCandle({scentData}) {
+function CreateCandle( {scentData} ) {
     console.log(scentData)
 
     const [showCandleForm, setShowCandleForm] = useState(false)
