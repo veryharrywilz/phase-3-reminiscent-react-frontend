@@ -16,7 +16,7 @@ function Candles ({candleArr}) {
             body: JSON.stringify({
                 name: name,
                 price: 20,
-                image: "candle.jpeg",
+                image: "https://cb.scene7.com/is/image/Crate/ShinolaCandle3ThymeOlvBlueSSF21/$web_pdp_main_carousel_high$/210427132020/shinola-no.-3-bergamot-eucalyptus-and-amber-scented-candle.jpg",
                 scents: scents
             })
         })
