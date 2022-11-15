@@ -23,19 +23,19 @@ function CreateCandle({ scentData, handleSubmit }) {
                 <input type="text" placeholder='Candle Name' name='name'></input>
 
                 <select name='scent1'>
-                <option calue ='' disabled selected hidden >-Select a primary scent-</option>
+                <option disabled selected hidden >-Select a primary scent-</option>
                     {scentOptions}
                 </select>
                 <select name='scent2'>
-                <option calue ='' disabled selected hidden >-Select a second scent-</option>
+                <option disabled selected hidden >-Select a second scent-</option>
                     {scentOptions}
                 </select>
                 <select name='scent3'>
-                <option calue ='' disabled selected hidden >-Select a third scent-</option>
+                <option disabled selected hidden >-Select a third scent-</option>
                     {scentOptions}
                 </select>
                 <select name='scent4'>
-                <option calue ='' disabled selected hidden >-Select a fourth scent-</option>
+                <option disabled selected hidden >-Select a fourth scent-</option>
                     {scentOptions}
                 </select>
 

@@ -16,7 +16,8 @@ function Candles ({candleArr}) {
             body: JSON.stringify({
                 name: name,
                 price: 20,
-                image: "candle.jpeg"
+                image: "candle.jpeg",
+                scents: scents
             })
         })
         .then(resp => resp.json())
