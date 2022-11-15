@@ -1,14 +1,14 @@
 import CandleContainer from "./CandleContainer";
 import CreateCandle from "./CreateCandle";
 
-function Candles () {
+function Candles ({candleArr}) {
     console.log("hello from Candles")
 
 
     return (
         <div>
         <CreateCandle/>
-        <CandleContainer/>
+        <CandleContainer candleArr={candleArr}/>
         </div>
     )
 

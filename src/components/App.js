@@ -3,12 +3,13 @@ import React, { useEffect, useState } from 'react';
 import Home from './Home';
 
 function App() {
+// const [candleArr, setCandleArr] = useState([])
 
-  // useEffect(() => {
-  //   fetch('http://localhost:9292/hello')
-  //   .then(res => res.json())
-  //   .then(data => console.log(data))
-  // },[])
+//   useEffect(() => {
+//     fetch('http://localhost:9292/candles')
+//     .then(res => res.json())
+//     .then(data => setCandleArr(data))
+//   },[])
 
   return (
     <div className="App">

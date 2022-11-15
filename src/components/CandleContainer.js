@@ -1,13 +1,21 @@
 import CandleCard from "./CandleCard";
 
-function CandleContainer () {
+function CandleContainer ({candleArr}) {
 
-    console.log("hello from candle container")
 
     return (
 
         <div>
-            <CandleCard/>
+            <ul className="card">
+            {candleArr.map(candle => (
+                <CandleCard
+                key = {candle.id}
+                candlePrice = {candle.price}
+                candleName = {candle.name} 
+                />
+            ))}
+           
+            </ul>
         </div>
     )
 }
