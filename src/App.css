@@ -3,6 +3,7 @@
     font-family: "Bell Gothic Std";
     text-align: left;
     padding: 20px;
+    font-style: italic; 
   }
 
   .candleCard {
@@ -55,4 +56,13 @@
     .candleCard {
       width: calc(15% - 3rem);
     }
+  }
+
+  .top-banner-text, .banner-index-0, .hidden {
+    font-family: "Magda", "sans-serif";
+    font-size: 14px;
+    line-height: 30px;
+    text-align: center;
+    background-color: #656565;
+    color: #ffffff;
   }
