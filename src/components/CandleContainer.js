@@ -12,6 +12,7 @@ function CandleContainer ({candleArr}) {
                 key = {candle.id}
                 candlePrice = {candle.price}
                 candleName = {candle.name} 
+                candleImg = {candle.image}
                 />
             ))}
            
