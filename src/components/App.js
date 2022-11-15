@@ -15,8 +15,7 @@ function App() {
             <h1>Reminiscent</h1>
             <Home/>
     </div>
-
-  );
+    )
 }
 
 export default App;
