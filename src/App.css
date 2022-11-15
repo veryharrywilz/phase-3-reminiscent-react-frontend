@@ -1,0 +1,33 @@
+.logo {
+    background-color: #f2f1f1;
+    font-family: "Bell Gothic Std";
+    text-align: left;
+    padding: 20px;
+  }
+
+  .candleCard {
+    font-family: "Bell Gothic Std";
+    padding: 20px;
+    background-color: #f2f1f1;
+    width: calc(33% - 2rem);
+    margin: 1rem;
+  }
+
+  .candleCard img {
+    width: 100%;
+  }
+  .candleCard button {
+    margin-top: 0.5rem;
+  }
+
+  @media (min-width: 1024px) {
+    .candleCard {
+      width: calc(25% - 2rem);
+    }
+  }
+  
+  @media (min-width: 1200px) {
+    .candleCard {
+      width: calc(10% - 2rem);
+    }
+  }
