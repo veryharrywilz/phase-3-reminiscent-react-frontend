@@ -20,8 +20,6 @@ function Candles ({candleArr}) {
     return (
         <div>
         <CreateCandle scentData={scentData}/>
-        <CandleContainer/>
-        <CreateCandle/>
         <CandleContainer candleArr={candleArr}/>
         </div>
     )

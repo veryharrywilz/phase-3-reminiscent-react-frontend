@@ -5,7 +5,7 @@ function CreateCandle( {scentData} ) {
 
     const [showCandleForm, setShowCandleForm] = useState(false)
     const scentOptions = scentData.map((scent) => {
-        return(<option key={scent.name}>{scent.name}</option>)
+        return(<option>{scent.name}</option>)
     })
 
     function handleClick(scentData) {
