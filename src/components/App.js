@@ -11,8 +11,10 @@ function App() {
 //     .then(data => setCandleArr(data))
 //   },[])
 
+const bannerIndex = ["Give the perfect Gift!", "Have a good holiday season!"]
   return (
     <div className="App">
+            <h1 className='top-banner-text'>{bannerIndex[0]}</h1>
             <h1 className='logo'>Reminiscent</h1>
             <Home/>
     </div>
