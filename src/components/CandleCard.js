@@ -4,7 +4,7 @@ return (
     <div className="candleCard">
     <h1>{candleName}</h1>
     <img src={candleImg}/>
-    <p>{candlePrice}</p>
+    <p>${candlePrice}</p>
     <button>Add to Cart</button>
     </div>
 )
