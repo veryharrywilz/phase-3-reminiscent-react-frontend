@@ -1,6 +1,4 @@
-
-function Login () {
-
+function Login() {
 
 }
 

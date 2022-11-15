@@ -1,6 +1,5 @@
+function Cart() {
 
-function Cart () {
-    
 }
 
 export default Cart;

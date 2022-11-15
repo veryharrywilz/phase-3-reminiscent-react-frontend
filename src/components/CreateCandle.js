@@ -40,7 +40,7 @@ function CreateCandle({ scentData, handleSubmit }) {
                 </select>
 
                 <select placeholder='Color'>
-                    <option calue ='' disabled selected hidden >-Select a color-</option>
+                    <option calue='' disabled selected hidden >-Select a color-</option>
                     <option>Red</option>
                     <option>Orange</option>
                     <option>Yellow</option>
