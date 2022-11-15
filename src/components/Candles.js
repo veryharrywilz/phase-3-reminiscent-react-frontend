@@ -2,10 +2,9 @@ import CandleContainer from "./CandleContainer";
 import CreateCandle from "./CreateCandle";
 import { useState, useEffect } from 'react'
 
-function Candles({ candleArr }) {
+function Candles({ candleArr, setNewCandle }) {
 
     const [scentData, setScentData] = useState([])
-    const [newCandle, setNewCandle] = useState({})
 
 
     function onCandleFormSubmit(name, scents) {

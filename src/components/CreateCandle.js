@@ -12,7 +12,17 @@ function CreateCandle({ scentData, handleSubmit }) {
         e.preventDefault()
         const scents = []
         scents.push(e.target.scent1.value, e.target.scent2.value, e.target.scent3.value, e.target.scent4.value)
-        handleSubmit(e.target.name.value, scents)
+        console.log(scents)
+        const finalScents = scents.filter((scent) => {
+            if( scent.includes("Select")) {
+                return false
+            }
+            else {
+                return true
+            }
+        })
+        console.log(finalScents)
+        handleSubmit(e.target.name.value, finalScents)
     }
 
 
@@ -23,19 +33,19 @@ function CreateCandle({ scentData, handleSubmit }) {
                 <input type="text" placeholder='Candle Name' name='name'></input>
 
                 <select name='scent1'>
-                <option disabled selected hidden >-Select a primary scent-</option>
+                <option>-Select a primary scent-</option>
                     {scentOptions}
                 </select>
                 <select name='scent2'>
-                <option disabled selected hidden >-Select a second scent-</option>
+                <option>-Select a second scent-</option>
                     {scentOptions}
                 </select>
                 <select name='scent3'>
-                <option disabled selected hidden >-Select a third scent-</option>
+                <option>-Select a third scent-</option>
                     {scentOptions}
                 </select>
                 <select name='scent4'>
-                <option disabled selected hidden >-Select a fourth scent-</option>
+                <option>-Select a fourth scent-</option>
                     {scentOptions}
                 </select>
 
