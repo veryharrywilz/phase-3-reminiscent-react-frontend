@@ -1,6 +1,6 @@
 
-function Cart () {
-    
+function Cart() {
+
     console.log("hello from Cart")
 }
 

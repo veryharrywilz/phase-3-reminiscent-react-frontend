@@ -1,14 +1,14 @@
-function CandleCard ({candleName, candlePrice, candleImg}){
+function CandleCard({ candleName, candlePrice, candleImg }) {
 
     console.log(candleImg)
-return (
-    <div className="candleCard">
-    <h1>{candleName}</h1>
-    <img src={candleImg}/>
-    <p>{candlePrice}</p>
-    <button>Add to Cart</button>
-    </div>
-)
+    return (
+        <div className="candleCard">
+            <h1>{candleName}</h1>
+            <img src={candleImg} />
+            <p>{candlePrice}</p>
+            <button>Add to Cart</button>
+        </div>
+    )
 }
 
 export default CandleCard

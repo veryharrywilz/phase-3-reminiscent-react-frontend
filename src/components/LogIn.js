@@ -1,9 +1,8 @@
+function Login() {
 
-function Login () {
-
-return (
-    console.log("hello from login")
-)
+    return (
+        console.log("hello from login")
+    )
 }
 
 export default Login;
