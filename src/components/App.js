@@ -13,7 +13,7 @@ function App() {
 
   return (
     <div className="App">
-            <h1>Reminiscent</h1>
+            <h1 className='logo'>Reminiscent</h1>
             <Home/>
     </div>
     )

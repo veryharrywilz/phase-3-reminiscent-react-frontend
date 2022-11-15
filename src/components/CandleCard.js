@@ -2,10 +2,11 @@ function CandleCard ({candleName, candlePrice, candleImg}){
 
     console.log(candleImg)
 return (
-    <div>
+    <div className="candleCard">
     <h1>{candleName}</h1>
+    <img src={candleImg}/>
     <p>{candlePrice}</p>
-    <img src={candleImg} />
+    <button>Add to Cart</button>
     </div>
 )
 }
