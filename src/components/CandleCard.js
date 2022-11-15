@@ -1,6 +1,5 @@
 function CandleCard ({candleName, candlePrice, candleImg}){
-
-    console.log(candleImg)
+    
 return (
     <div className="candleCard">
     <h1>{candleName}</h1>

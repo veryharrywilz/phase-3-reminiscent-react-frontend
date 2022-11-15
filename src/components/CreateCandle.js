@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 
 function CreateCandle({ scentData, handleSubmit }) {
-    console.log(scentData)
+
 
     const scentOptions = scentData.map((scent) => {
         return (<option>{scent.name}</option>)
