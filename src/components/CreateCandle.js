@@ -19,7 +19,7 @@ function CreateCandle({ scentData, handleSubmit }) {
 
     return (
         <div>
-            <form onSubmit={(e) => onFormSubmit(e)}>
+            <form onSubmit={(e) => onFormSubmit(e)} className="candleForm">
                 <input type="text" placeholder='Candle Name' name='name'></input>
 
                 <select name='scent1'>

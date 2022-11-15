@@ -20,6 +20,29 @@
     margin-top: 0.5rem;
   }
 
+  .candleForm {
+    background-color: #f2f1f1;
+    height: 50px;
+    font-family: "Bell Gothic Std";
+  }
+
+  .candleForm select {
+    margin-right: 10px;
+    height: 25px;
+    font-family: "Bell Gothic Std";
+  }
+
+  .candleForm button {
+    font-family: "Bell Gothic Std";
+    border-style: default;
+    border-color: #838383;;
+  }
+
+  .candleForm input {
+    margin-right: 10px;
+    height: 19px;
+  }
+
   @media (min-width: 1024px) {
     .candleCard {
       width: calc(25% - 2rem);
