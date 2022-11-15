@@ -1,9 +1,11 @@
 import Candles from "./Candles";
 import Login from "./LogIn";
 import Cart from "./Cart";
-import React, {useState, useEffect} from "react";
+import {useEffect, useState} from 'react'
 
 function Home () {
+    
+    
     console.log("hello from home")
     const [candleArr, setCandleArr] = useState([])
 
@@ -13,9 +15,10 @@ function Home () {
       .then(data => setCandleArr(data))
     },[])
 
+
     return (
         <div>
-            <Candles candleArr={candleArr}/>
+            <Candles/>
             <Login/>
             <Cart/>
         </div>
