@@ -3,7 +3,6 @@ import CreateCandle from "./CreateCandle";
 import {useState, useEffect} from 'react'
 
 function Candles ({candleArr}) {
-    console.log("hello from Candles")
     const [scentData, setScentData] = useState([])
     const [newCandle, setNewCandle] = useState({})
 
