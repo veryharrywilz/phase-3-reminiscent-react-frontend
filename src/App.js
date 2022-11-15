@@ -4,7 +4,7 @@ import { useEffect, useState } from 'react';
 function App() {
 
   useEffect(() => {
-    fetch('http://localhost:9292/')
+    fetch('http://localhost:9292/hello')
     .then(res => res.json())
     .then(data => console.log(data))
   },[])
