@@ -11,7 +11,7 @@ const allCandles = candleArr.map((candle) => {
 
     return (
 
-        <div className="card">
+        <div>
          {allCandles}
         </div>
     )

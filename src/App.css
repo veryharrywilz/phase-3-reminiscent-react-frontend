@@ -7,6 +7,8 @@
   }
 
   .candleCard {
+    display: grid;
+    float: left;
     font-family: "Bell Gothic Std";
     padding-left: 20px;
     padding-right: 20px;
