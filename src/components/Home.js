@@ -18,7 +18,7 @@ function Home () {
 
     return (
         <div>
-            <Candles/>
+            <Candles candleArr={candleArr}/>
             <Login/>
             <Cart/>
         </div>
