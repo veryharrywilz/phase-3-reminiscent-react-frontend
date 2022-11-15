@@ -15,12 +15,18 @@
     padding-top: 5px;
     padding-bottom: 5px;
     background-color: #f2f1f1;
+    /* height: 390px; */
     margin: 1rem;
   }
 
   .candleCard img {
     width: 100%;
   }
+
+  .candleCard h1 {
+    height: 75px;
+  }
+
   .candleCard button {
     margin-top: 0.5rem;
   }
