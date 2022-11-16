@@ -10,6 +10,8 @@ function CandleContainer({ candleArr }) {
         />
     })
 
+    console.log(allCandles)
+
     return (
 
         <div>
