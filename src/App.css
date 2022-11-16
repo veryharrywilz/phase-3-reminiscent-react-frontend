@@ -127,9 +127,9 @@
 
   }
   
-  span::before {
+  .top-banner::before {
     content: "Reminiscent NYC, now open.";
-    animation: animate infinite 5s;
+    animation: animate infinite 7s;
     padding-left: 10px;
 }
 
