@@ -1,10 +1,16 @@
-function CandleCard({ candleName, candlePrice, candleImg, candleScents }) {
+function CandleCard({ candle, setCart, checkOut }) {
+
+    function addToCart(candle){
+        console.log(candle)
+        checkOut(candle)
+    }
+
     return (
         <div className="candleCard">
-            <h1>{candleName}</h1>
-            <img alt="Candle" src={candleImg} />
-            <p>${candlePrice}</p>
-            <button>Add to Cart</button>
+            <h1>{candle.name}</h1>
+            <img alt="Candle" src={candle.image} />
+            <p>${candle.price}</p>
+            <button onClick={() => addToCart(candle)}>Add to Cart</button>
         </div>
     )
 }

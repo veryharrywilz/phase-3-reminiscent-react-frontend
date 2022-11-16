@@ -13,11 +13,18 @@ import {
 
 function App() {
   const [currentUser, setCurrentUser] = useState(null)
+  const [cart, setCart] = useState([])
 
   const changeUser = (user) => {
     setCurrentUser(user)
   }
   console.log(currentUser)
+
+  function checkOut(candle){
+    console.log(`${candle.name} is in the cart!`)
+    setCart([...cart, candle])
+    console.log(cart)
+}
   
   const bannerIndex = ["Give the perfect Gift!", "Have a good holiday season!"]
   return (
@@ -39,10 +46,11 @@ function App() {
           <button>Candle Creator</button>
         </Link>
         <Routes>
-          <Route path='/' element={<Home />} />
+          <Route path='/' element={<Home setCart={setCart} checkOut={checkOut} />} />
           <Route path='/login' element={<Login changeUser={changeUser}/>} />
-          <Route path='/cart' element={<Cart />} />
-          <Route path='/candlecreator' element={<CandleCreator currentUser={currentUser}/>} />
+          <Route path='/cart' element={<Cart cart={cart} />} />
+          <Route path='/candlecreator' element={<CandleCreator currentUser={currentUser} />} />
+
         </Routes>
       </Router>
 
