@@ -4,7 +4,6 @@ import { useEffect, useState } from 'react'
 
 function Home() {
     const [candleArr, setCandleArr] = useState([])
-    const [newCandle, setNewCandle] = useState({})
 
     useEffect(() => {
         fetch('http://localhost:9292/candles')
@@ -17,8 +16,7 @@ function Home() {
         <div>
             <Banner/>
             <Candles 
-            candleArr={candleArr}
-            setNewCandle={setNewCandle} />
+            candleArr={candleArr} />
         </div>
     )
 }
