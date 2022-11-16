@@ -1,15 +1,12 @@
 import CandleContainer from "./CandleContainer";
 import { useState, useEffect } from 'react'
 
-function Candles({ candleArr, setCart, checkOut }) {
-
-
+function Candles({ candleArr, currentUser }) {
 
 
     return (
         <div>
-            
-            <CandleContainer candleArr={candleArr} setCart={setCart} checkOut={checkOut}/>
+            <CandleContainer candleArr={candleArr} currentUser={currentUser} />
         </div>
     )
 

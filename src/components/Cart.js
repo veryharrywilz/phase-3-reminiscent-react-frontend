@@ -1,26 +1,32 @@
-function Cart({cart, removeCandle}) {
+import { useEffect, useState } from 'react'
+import CartCard from "./CartCard"
 
-function handleDelete(c) {
-    removeCandle(c)
-}
+function Cart({ currentUser, cart, setCart }) {
+const [deletedCandle, setDeletedCandle] = useState({})
 
+    
+        useEffect(() => {
+            if (currentUser !== null) {
+            fetch(`http://localhost:9292/users/${currentUser.id}/cart`)
+                .then(res => res.json())
+                .then(data => {
+                    setCart(data)
+                    console.log(data)
+                })
+            }
+        }, [])
+    
 
-
-    const inCart = cart.map((c) =>  {
-
+    const cartCandleArray = cart.map((candle) => {
         return (
-            <div className="candleCard">
-            <h1>{c.name}</h1>
-            <img alt="Candle" src={c.image} />
-            <p>${c.price}</p>
-            <button onClick={() => handleDelete(c)}>Remove From Cart</button>
-        </div>
+            <CartCard candle={candle} currentUser={currentUser} setDeletedCandle={setDeletedCandle} />
         )
-
     })
 
     return (
-        <div>{inCart}</div>
+        <div>
+            {cartCandleArray}
+        </div>
     )
 }
 

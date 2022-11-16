@@ -2,7 +2,7 @@ import Candles from "./Candles";
 import Banner from "../Banner";
 import { useEffect, useState } from 'react'
 
-function Home({setCart, checkOut}) {
+function Home({ currentUser }) {
     const [candleArr, setCandleArr] = useState([])
 
 
@@ -17,7 +17,8 @@ function Home({setCart, checkOut}) {
         <div>
             <Banner/>
             <Candles 
-            candleArr={candleArr} setCart={setCart} checkOut={checkOut}/>
+            candleArr={candleArr}
+            currentUser={currentUser} />
         </div>
     )
 }

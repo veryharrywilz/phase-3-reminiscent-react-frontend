@@ -24,16 +24,23 @@ function App() {
   }
   console.log(currentUser)
 
-  function checkOut(candle){
-    console.log(`${candle.name} is in the cart!`)
-    setCart([...cart, candle])
-    console.log(cart)
-}
-  function removeCandle(c){
-   const updatedCart = cart.filter((candle) => candle.id != c.id)
-    setCart(updatedCart)
-  }
+
+
   
+
+
+
+
+
+
+
+
+
+
+
+
+  const bannerIndex = ["Give the perfect Gift!", "Have a good holiday season!"]
+
   return (
 
     <div className="App">
@@ -60,9 +67,9 @@ function App() {
           <button>Candle Creator</button>
         </Link>
         <Routes>
-          <Route path='/' element={<Home setCart={setCart} checkOut={checkOut} />} />
+          <Route path='/' element={<Home setCart={setCart} currentUser={currentUser}  />} />
           <Route path='/login' element={<Login changeUser={changeUser}/>} />
-          <Route path='/cart' element={<Cart cart={cart} removeCandle={removeCandle}/>} />
+          <Route path='/cart' element={<Cart cart={cart} setCart={setCart} currentUser={currentUser}/>} />
           <Route path='/candlecreator' element={<CandleCreator currentUser={currentUser} />} />
 
         </Routes>
