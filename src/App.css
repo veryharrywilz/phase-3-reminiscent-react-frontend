@@ -58,20 +58,34 @@
     height: 19px;
   }
 
-  .candleCreatorImage {
+  .displayCandle {
+    position: relative; left: 350px; bottom: 320px;
+
+  }
+
+  #candleFlicker {
+    height: 110px;
+    position: relative; top:95px; left:355px;
+    opacity: 70%;
+    z-index: 1;
+  }
+
+  #candleCreatorImage {
     width: 600px;
     position: absolute;
     
   }
 
-  .candleCreatorLabel {
+  #candleCreatorLabel {
     display:block; width:200px; height:150px;
     text-align: center;
-    position: relative; top:250px; left:200px;
+    position: relative; top:140px; left:315px;
     opacity: 70%;
     border-radius: 8px;
     box-shadow: 5px;
   }
+
+
 
   @media (min-width: 1024px) {
     .candleCard {
