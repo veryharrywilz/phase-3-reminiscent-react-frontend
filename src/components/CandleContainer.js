@@ -10,7 +10,7 @@ function CandleContainer({ candleArr }) {
         />
     })
 
-    console.log(allCandles)
+    //console.log(allCandles)
 
     return (
 
