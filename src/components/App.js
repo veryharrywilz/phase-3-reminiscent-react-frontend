@@ -33,14 +33,14 @@ function App() {
    const updatedCart = cart.filter((candle) => candle.id != c.id)
     setCart(updatedCart)
   }
-  const bannerIndex = ["Give the perfect Gift!", "Have a good holiday season!"]
+  
   return (
 
     <div className="App">
       <Router>
         <div className='top-banner-text'><span className='top-banner'></span></div>
         <h1 className='logo'>Reminiscent</h1>
-        {currentUser? `Welcome ${currentUser.user_name}` : null}
+        {currentUser? <h2 className='username'>Welcome, {currentUser.user_name}!</h2> : null}
         <Link to='/'>
           <button>Home</button>
         </Link>

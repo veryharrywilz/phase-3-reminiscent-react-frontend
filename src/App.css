@@ -147,3 +147,9 @@
         content: "Can't find your favorite scent? Create a custom candle now.";
     }
 }
+
+.username{
+  font-family: "Bell Gothic Std";
+  padding-left: 20px;
+  font-style: italic;
+}
