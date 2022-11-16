@@ -13,8 +13,15 @@ function Login({ changeUser }) {
     function findCurrentUser(username) {
         fetch(`http://localhost:9292/users/${username}`)
             .then(res => res.json())
-            .then(user => changeUser(user))
-        navigate('/')
+            .then(data => {
+                if ('message' in data) {
+                    alert(data.message)
+                }
+                else {
+                    changeUser(data)
+                    navigate('/')
+                }
+            })
     }
     function handleSubmit(e) {
         e.preventDefault()
@@ -30,28 +37,31 @@ function Login({ changeUser }) {
 
         setCreateUser({ ...createUser, [name]: value })
     }
-    function handleCreateSubmit(e){
+    function handleCreateSubmit(e) {
         e.preventDefault()
-        console.log("submited")
-        fetch('http://localhost:9292/users',{
-            method : "POST",
-            headers : {
-                'Content-type' : 'application/json'
+        fetch('http://localhost:9292/users', {
+            method: "POST",
+            headers: {
+                'Content-type': 'application/json'
             },
             body: JSON.stringify({
                 user_name: createUser.username,
                 password: createUser.password
             })
         })
-        .then(res => res.json())
-        .then(data => {
-            if ('message' in data){
-                alert("Invalid Username or Password. Try again")
-            }
-            else{
-                changeUser(data)
-                navigate('/')
-            }
+            .then(res => res.json())
+            .then(data => {
+                if ('message' in data) {
+                    alert(data.message)
+                }
+                else {
+                    changeUser(data)
+                    navigate('/')
+                }
+            })
+        setCreateUser({
+            username: "",
+            password: ""
         })
     }
 
@@ -81,19 +91,21 @@ function Login({ changeUser }) {
             <div className="create_account_form">
                 <form onSubmit={handleCreateSubmit}>
                     <label value="Create_account">Create Acount:</label><br />
-                    <input 
-                        type="text" 
-                        name="username" 
-                        autoFocus={true} 
-                        placeholder="Username" 
+                    <input
+                        type="text"
+                        name="username"
+                        autoFocus={true}
+                        placeholder="Username"
+                        value={createUser.username}
                         onChange={handleCreateChange}
                     />
                     <br />
-                    <input 
-                        type="password" 
-                        name="password" 
-                        autoFocus={true} 
-                        placeholder="Password" 
+                    <input
+                        type="password"
+                        name="password"
+                        autoFocus={true}
+                        placeholder="Password"
+                        value={createUser.password}
                         onChange={handleCreateChange}
                     />
                     <input type="submit" value="Create Account" />

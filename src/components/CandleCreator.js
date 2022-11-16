@@ -45,7 +45,7 @@ function CandleCreator({ currentUser }) {
                     <CreateCandle scentData={scentData} handleSubmit={onCandleFormSubmit} setLabelColor={setLabelColor} />
                     <span className="displayCandle">
                         <img id="candleFlicker" src={flicker} alt='candle flicker' />
-                        <img id="candleCreatorImage" src="https://cb.scene7.com/is/image/Crate/ShinolaCandle3ThymeOlvBlueSSF21/$web_pdp_main_carousel_high$/210427132020/shinola-no.-3-bergamot-eucalyptus-and-amber-scented-candle.jpg" />
+                        <img id="candleCreatorImage" alt='candle' src="https://cb.scene7.com/is/image/Crate/ShinolaCandle3ThymeOlvBlueSSF21/$web_pdp_main_carousel_high$/210427132020/shinola-no.-3-bergamot-eucalyptus-and-amber-scented-candle.jpg" />
                         <span id="candleCreatorLabel" style={{ backgroundColor: labelColor }}>
                             <h2 style={{ fontFamily: "Bell Gothic Std", fontStyle: "italics" }}>{labelName}</h2>
                             <p style={{ fontFamily: "Bell Gothic Std" }}>{labelScents.join(' - ')}</p>
