@@ -3,6 +3,7 @@ import React, { useEffect, useState } from 'react';
 import Home from './Home';
 import Login from "./LogIn";
 import Cart from "./Cart";
+import CandleCreator from './CandleCreator';
 import {
   BrowserRouter as Router,
   Routes,
@@ -34,10 +35,14 @@ function App() {
         <Link to='/cart'>
           <button>Cart</button>
         </Link>
+        <Link to='/candlecreator'>
+          <button>Candle Creator</button>
+        </Link>
         <Routes>
           <Route path='/' element={<Home />} />
           <Route path='/login' element={<Login changeUser={changeUser}/>} />
           <Route path='/cart' element={<Cart />} />
+          <Route path='/candlecreator' element={<CandleCreator />} />
         </Routes>
       </Router>
 
