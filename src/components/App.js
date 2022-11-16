@@ -11,15 +11,14 @@ import {
 } from "react-router-dom";
 
 function App() {
-  // const [candleArr, setCandleArr] = useState([])
+  const [currentUser, setCurrentUser] = useState(null)
 
-  //   useEffect(() => {
-  //     fetch('http://localhost:9292/candles')
-  //     .then(res => res.json())
-  //     .then(data => setCandleArr(data))
-  //   },[])
-
-const bannerIndex = ["Give the perfect Gift!", "Have a good holiday season!"]
+  const changeUser = (user) => {
+    setCurrentUser(user)
+  }
+  console.log(currentUser)
+  
+  const bannerIndex = ["Give the perfect Gift!", "Have a good holiday season!"]
   return (
 
     <div className="App">
@@ -37,7 +36,7 @@ const bannerIndex = ["Give the perfect Gift!", "Have a good holiday season!"]
         </Link>
         <Routes>
           <Route path='/' element={<Home />} />
-          <Route path='/login' element={<Login />} />
+          <Route path='/login' element={<Login changeUser={changeUser}/>} />
           <Route path='/cart' element={<Cart />} />
         </Routes>
       </Router>

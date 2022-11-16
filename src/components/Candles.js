@@ -22,7 +22,6 @@ function Candles({ candleArr, setNewCandle }) {
         })
             .then(resp => resp.json())
             .then(data => {
-                console.log(data)
                 setNewCandle(data)
             })
     }
