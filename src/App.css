@@ -67,13 +67,15 @@
     }
   }
 
-  .top-banner-text, .banner-index-0, .hidden {
+  .top-banner-text, .hidden {
     font-family: "Magda", "sans-serif";
     font-size: 14px;
     line-height: 30px;
     text-align: center;
     background-color: #595959;
     color: #ffffff;
+  
+    
   }
 
   .banner {
@@ -93,3 +95,23 @@
 
   }
   
+  span::before {
+    content: "Reminiscent NYC, now open.";
+    animation: animate infinite 5s;
+    padding-left: 10px;
+}
+
+@keyframes animate {
+
+    0% {
+        content: "Holiday season is here!";
+    }
+
+    50% {
+        content: "Gifts that everyone will love.";
+    }
+
+    75% {
+        content: "Can't find your favorite scent? Create a custom candle now.";
+    }
+}
