@@ -15,7 +15,7 @@ function CandleCard({ candle, currentUser }) {
 
     return (
         <div className="candleCard">
-            <h1>{candle.name}</h1>
+            <h1 className="candleHeading" >{candle.name}</h1>
             <img alt="Candle" src={candle.image} />
             <p>${candle.price}</p>
             <button onClick={() => addToCart(candle)}>Add to Cart</button>

@@ -14,9 +14,10 @@
     padding-right: 20px;
     padding-top: 5px;
     padding-bottom: 5px;
-    background-color: #f2f1f1;
+    background-color: #b2c0a550;
     /* height: 390px; */
     margin: 1rem;
+    border-radius: 15px 50px 30px 5px;
   }
 
   .candleCard img {
@@ -24,7 +25,7 @@
   }
 
   .candleCard h1 {
-    height: 75px;
+    height: 40px;
   }
 
   .candleCard button {
@@ -99,18 +100,20 @@
     }
   }
 
-  .top-banner-text, .banner-index-0, .hidden {
+  .top-banner-text, .hidden {
     font-family: "Magda", "sans-serif";
     font-size: 14px;
     line-height: 30px;
     text-align: center;
     background-color: #595959;
     color: #ffffff;
+  
+    
   }
 
   .banner {
     height: 300px;
-    padding-left: 4.5%;
+    padding-left: 3%;
     background-color: #ffffff;;
 
   }
@@ -125,3 +128,35 @@
 
   }
   
+  .top-banner::before {
+    content: "Reminiscent NYC, now open.";
+    animation: animate infinite 7s;
+    padding-left: 10px;
+}
+
+@keyframes animate {
+
+    0% {
+        content: "Holiday season is here!";
+    }
+
+    50% {
+        content: "Gifts that everyone will love.";
+    }
+
+    75% {
+        content: "Can't find your favorite scent? Create a custom candle now.";
+    }
+}
+
+.username{
+  font-family: "Bell Gothic Std";
+  padding-left: 20px;
+  font-style: italic;
+}
+
+.candleHeading{
+  font-family: "Bell Gothic Std";
+  padding-top: 15px;
+  text-align: center;
+}

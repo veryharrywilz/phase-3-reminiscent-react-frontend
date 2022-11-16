@@ -25,6 +25,7 @@ function App() {
   console.log(currentUser)
 
 
+
   
 
 
@@ -39,13 +40,14 @@ function App() {
 
 
   const bannerIndex = ["Give the perfect Gift!", "Have a good holiday season!"]
+
   return (
 
     <div className="App">
       <Router>
-        <h1 className='top-banner-text'>{bannerIndex[0]}</h1>
+        <div className='top-banner-text'><span className='top-banner'></span></div>
         <h1 className='logo'>Reminiscent</h1>
-        {currentUser? `Welcome ${currentUser.user_name}` : null}
+        {currentUser? <h2 className='username'>Welcome, {currentUser.user_name}!</h2> : null}
         <Link to='/'>
           <button>Home</button>
         </Link>
