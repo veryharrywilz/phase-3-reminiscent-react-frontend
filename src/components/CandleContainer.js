@@ -1,16 +1,14 @@
 import CandleCard from "./CandleCard";
 
-function CandleContainer({ candleArr }) {
+function CandleContainer({ candleArr, setCart, checkOut}) {
     const allCandles = candleArr.map((candle) => {
         return <CandleCard
             key={candle.id}
-            candlePrice={candle.price}
-            candleName={candle.name}
-            candleImg={candle.image}
+            candle={candle}
+            setCart={setCart}
+            checkOut={checkOut}
         />
     })
-
-    //console.log(allCandles)
 
     return (
 

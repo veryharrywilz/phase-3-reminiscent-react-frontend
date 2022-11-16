@@ -13,6 +13,7 @@ import {
 
 function App() {
   const [currentUser, setCurrentUser] = useState(null)
+  const [cart, setCart] = useState([])
 
   const changeUser = (user) => {
     setCurrentUser(user)
@@ -22,7 +23,16 @@ function App() {
     setCurrentUser(null)
   }
   console.log(currentUser)
-  
+
+  function checkOut(candle){
+    console.log(`${candle.name} is in the cart!`)
+    setCart([...cart, candle])
+    console.log(cart)
+}
+  function removeCandle(c){
+   const updatedCart = cart.filter((candle) => candle.id != c.id)
+    setCart(updatedCart)
+  }
   const bannerIndex = ["Give the perfect Gift!", "Have a good holiday season!"]
   return (
 
@@ -50,10 +60,11 @@ function App() {
           <button>Candle Creator</button>
         </Link>
         <Routes>
-          <Route path='/' element={<Home />} />
+          <Route path='/' element={<Home setCart={setCart} checkOut={checkOut} />} />
           <Route path='/login' element={<Login changeUser={changeUser}/>} />
-          <Route path='/cart' element={<Cart />} />
-          <Route path='/candlecreator' element={<CandleCreator />} />
+          <Route path='/cart' element={<Cart cart={cart} removeCandle={removeCandle}/>} />
+          <Route path='/candlecreator' element={<CandleCreator currentUser={currentUser} />} />
+
         </Routes>
       </Router>
 

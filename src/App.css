@@ -33,27 +33,59 @@
 
   .candleForm {
     background-color: #f2f1f1;
-    height: 25px;
+    height: 240px;
     font-family: "Bell Gothic Std";
     padding: 20px;
+    width: 150px;
   }
 
   .candleForm select {
     margin-right: 10px;
     height: 25px;
     font-family: "Bell Gothic Std";
+    margin-top: 10px;
   }
 
   .candleForm button {
     font-family: "Bell Gothic Std";
     border-style: default;
-    border-color: #838383;;
+    border-color: #838383;
+    margin-top: 10px;
   }
 
   .candleForm input {
     margin-right: 10px;
     height: 19px;
   }
+
+  .displayCandle {
+    position: relative; left: 350px; bottom: 320px;
+
+  }
+
+  #candleFlicker {
+    height: 110px;
+    position: relative; top:95px; left:355px;
+    opacity: 70%;
+    z-index: 1;
+  }
+
+  #candleCreatorImage {
+    width: 600px;
+    position: absolute;
+    
+  }
+
+  #candleCreatorLabel {
+    display:block; width:200px; height:150px;
+    text-align: center;
+    position: relative; top:140px; left:315px;
+    opacity: 70%;
+    border-radius: 8px;
+    box-shadow: 5px;
+  }
+
+
 
   @media (min-width: 1024px) {
     .candleCard {
@@ -78,9 +110,8 @@
 
   .banner {
     height: 300px;
-    padding-top:  10px;
     padding-left: 4.5%;
-    background-color: #f2f1f1;
+    background-color: #ffffff;;
 
   }
   .banner-image {

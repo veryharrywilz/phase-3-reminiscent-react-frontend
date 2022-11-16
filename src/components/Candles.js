@@ -1,7 +1,7 @@
 import CandleContainer from "./CandleContainer";
 import { useState, useEffect } from 'react'
 
-function Candles({ candleArr, setNewCandle }) {
+function Candles({ candleArr, setCart, checkOut }) {
 
 
 
@@ -9,7 +9,7 @@ function Candles({ candleArr, setNewCandle }) {
     return (
         <div>
             
-            <CandleContainer candleArr={candleArr} />
+            <CandleContainer candleArr={candleArr} setCart={setCart} checkOut={checkOut}/>
         </div>
     )
 
