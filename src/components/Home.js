@@ -1,4 +1,5 @@
 import Candles from "./Candles";
+import Banner from "../Banner";
 import { useEffect, useState } from 'react'
 
 function Home() {
@@ -14,6 +15,7 @@ function Home() {
 
     return (
         <div>
+            <Banner/>
             <Candles 
             candleArr={candleArr}
             setNewCandle={setNewCandle} />
