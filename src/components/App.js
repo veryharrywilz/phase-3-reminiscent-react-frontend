@@ -49,7 +49,8 @@ function App() {
           <Route path='/' element={<Home setCart={setCart} checkOut={checkOut} />} />
           <Route path='/login' element={<Login changeUser={changeUser}/>} />
           <Route path='/cart' element={<Cart cart={cart} />} />
-          <Route path='/candlecreator' element={<CandleCreator />} />
+          <Route path='/candlecreator' element={<CandleCreator currentUser={currentUser} />} />
+
         </Routes>
       </Router>
 
