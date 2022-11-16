@@ -1,6 +1,4 @@
 function CandleCard({ candleName, candlePrice, candleImg, candleScents }) {
-
-
     return (
         <div className="candleCard">
             <h1>{candleName}</h1>

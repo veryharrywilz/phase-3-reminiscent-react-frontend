@@ -12,7 +12,7 @@ function Home() {
             .then(data => setCandleArr(data))
     }, [])
 
-
+    
     return (
         <div>
             <Banner/>
