@@ -14,9 +14,10 @@
     padding-right: 20px;
     padding-top: 5px;
     padding-bottom: 5px;
-    background-color: #f2f1f1;
+    background-color: #b2c0a550;
     /* height: 390px; */
     margin: 1rem;
+    border-radius: 15px 50px 30px 5px;
   }
 
   .candleCard img {
@@ -24,7 +25,7 @@
   }
 
   .candleCard h1 {
-    height: 75px;
+    height: 40px;
   }
 
   .candleCard button {
@@ -112,7 +113,7 @@
 
   .banner {
     height: 300px;
-    padding-left: 4.5%;
+    padding-left: 3%;
     background-color: #ffffff;;
 
   }
@@ -152,4 +153,10 @@
   font-family: "Bell Gothic Std";
   padding-left: 20px;
   font-style: italic;
+}
+
+.candleHeading{
+  font-family: "Bell Gothic Std";
+  padding-top: 15px;
+  text-align: center;
 }
