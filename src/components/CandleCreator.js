@@ -5,6 +5,9 @@ function CandleCreator() {
 
     const [scentData, setScentData] = useState([])
     const [newCandle, setNewCandle] = useState({})
+    const [labelColor, setLabelColor] = useState("white")
+    const [labelScents, setLabelScents] = useState([])
+    const [labelName, setLabelName] = useState('')
 
     useEffect(() => {
         fetch('http://localhost:9292/scents')
@@ -15,8 +18,8 @@ function CandleCreator() {
     }, [])
 
     function onCandleFormSubmit(name, scents) {
-        console.log("submitted")
-        console.log(name, scents)
+        setLabelScents(scents)
+        setLabelName(name)
         fetch('http://localhost:9292/candles', {
             method: 'POST',
             headers: { 'content-type': 'application/json' },
@@ -32,10 +35,15 @@ function CandleCreator() {
                 setNewCandle(data)
             })
     }
-    
+
     return (
         <div>
-            <CreateCandle scentData={scentData} handleSubmit={onCandleFormSubmit} />
+            <CreateCandle scentData={scentData} handleSubmit={onCandleFormSubmit} setLabelColor={setLabelColor}/>
+            <img className="candleCreatorImage" src="https://cb.scene7.com/is/image/Crate/ShinolaCandle3ThymeOlvBlueSSF21/$web_pdp_main_carousel_high$/210427132020/shinola-no.-3-bergamot-eucalyptus-and-amber-scented-candle.jpg" />
+            <span className="candleCreatorLabel" style={{ backgroundColor: labelColor}}>
+                <h2 style={{fontFamily: "Bell Gothic Std", fontStyle: "italics"}}>{labelName}</h2>
+                <p style={{fontFamily: "Bell Gothic Std"}}>{labelScents.join(' - ')}</p>
+                </span>
         </div>
     )
 }
