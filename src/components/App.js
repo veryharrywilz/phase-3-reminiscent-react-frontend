@@ -25,7 +25,10 @@ function App() {
     setCart([...cart, candle])
     console.log(cart)
 }
-  
+  function removeCandle(c){
+   const updatedCart = cart.filter((candle) => candle.id != c.id)
+    setCart(updatedCart)
+  }
   const bannerIndex = ["Give the perfect Gift!", "Have a good holiday season!"]
   return (
 
@@ -48,7 +51,7 @@ function App() {
         <Routes>
           <Route path='/' element={<Home setCart={setCart} checkOut={checkOut} />} />
           <Route path='/login' element={<Login changeUser={changeUser}/>} />
-          <Route path='/cart' element={<Cart cart={cart} />} />
+          <Route path='/cart' element={<Cart cart={cart} removeCandle={removeCandle}/>} />
           <Route path='/candlecreator' element={<CandleCreator currentUser={currentUser} />} />
 
         </Routes>
