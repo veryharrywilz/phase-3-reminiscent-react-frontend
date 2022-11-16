@@ -1,7 +1,7 @@
 import CreateCandle from "./CreateCandle";
 import React, {useState, useEffect} from 'react'
 
-function CandleCreator() {
+function CandleCreator({currentUser}) {
 
     const [scentData, setScentData] = useState([])
     const [newCandle, setNewCandle] = useState({})
@@ -27,7 +27,8 @@ function CandleCreator() {
                 name: name,
                 price: 20,
                 image: "https://cb.scene7.com/is/image/Crate/ShinolaCandle3ThymeOlvBlueSSF21/$web_pdp_main_carousel_high$/210427132020/shinola-no.-3-bergamot-eucalyptus-and-amber-scented-candle.jpg",
-                scents: scents
+                scents: scents,
+                user_id: currentUser.id
             })
         })
             .then(resp => resp.json())
@@ -37,6 +38,8 @@ function CandleCreator() {
     }
 
     return (
+        <div> 
+            {currentUser ? 
         <div>
             <CreateCandle scentData={scentData} handleSubmit={onCandleFormSubmit} setLabelColor={setLabelColor}/>
             <img className="candleCreatorImage" src="https://cb.scene7.com/is/image/Crate/ShinolaCandle3ThymeOlvBlueSSF21/$web_pdp_main_carousel_high$/210427132020/shinola-no.-3-bergamot-eucalyptus-and-amber-scented-candle.jpg" />
@@ -44,6 +47,8 @@ function CandleCreator() {
                 <h2 style={{fontFamily: "Bell Gothic Std", fontStyle: "italics"}}>{labelName}</h2>
                 <p style={{fontFamily: "Bell Gothic Std"}}>{labelScents.join(' - ')}</p>
                 </span>
+        </div>
+        : <h2 style={{fontFamily: "Bell Gothic Std"}}>Please log in to use the Candle Creator feature</h2>}
         </div>
     )
 }
