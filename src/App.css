@@ -66,8 +66,8 @@
 
   #candleFlicker {
     height: 110px;
-    position: relative; top:95px; left:355px;
-    opacity: 70%;
+    position: relative; top:88px; left:357px;
+    opacity: 60%;
     z-index: 1;
   }
 
@@ -78,11 +78,11 @@
   }
 
   #candleCreatorLabel {
-    display:block; width:200px; height:150px;
+    display:block; width:200px; height:100px;
     text-align: center;
-    position: relative; top:140px; left:315px;
-    opacity: 70%;
-    border-radius: 8px;
+    position: relative; top:150px; left:310px;
+    opacity: 40%;
+    border-radius: 20px;
     box-shadow: 5px;
   }
 
