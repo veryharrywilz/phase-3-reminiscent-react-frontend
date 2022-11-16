@@ -38,7 +38,7 @@ function App() {
 
     <div className="App">
       <Router>
-        <h1 className='top-banner-text'>{bannerIndex[0]}</h1>
+        <div className='top-banner-text'><span></span></div>
         <h1 className='logo'>Reminiscent</h1>
         {currentUser? `Welcome ${currentUser.user_name}` : null}
         <Link to='/'>
