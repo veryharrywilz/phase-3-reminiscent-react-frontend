@@ -31,7 +31,7 @@ function Cart({ currentUser }) {
 
     const cartCandleArray = cart.map((candle) => {
         return (
-            <CartCard candle={candle} currentUser={currentUser} setDeletedCandle={setDeletedCandle} />
+            <CartCard key={candle.id} candle={candle} currentUser={currentUser} setDeletedCandle={setDeletedCandle} />
         )
     })
 
