@@ -40,17 +40,17 @@ function CreateCandle({ scentData, handleSubmit, setLabelColor }) {
                 </select>
                 <br />
                 <select name='scent2'>
-                <option>-Optional-select a second scent-</option>
+                <option>-Optional-select another scent-</option>
                     {scentOptions}
                 </select>
                 <br />
                 <select name='scent3'>
-                <option>-Optional-select a third scent-</option>
+                <option>-Optional-select another scent-</option>
                     {scentOptions}
                 </select>
                 <br />
                 <select name='scent4'>
-                <option>-Optional-select a fourth scent-</option>
+                <option>-Optional-select another scent-</option>
                     {scentOptions}
                 </select>
                 <br />
