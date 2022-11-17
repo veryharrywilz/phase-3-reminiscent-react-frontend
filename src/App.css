@@ -55,12 +55,13 @@
   }
 
   .candleCard h2 {
-    height: 20px;
+    height: 37px;
     font-family:"Bell Gothic Std";
   }
 
   .candleCard button {
     margin-top: 0.5rem;
+    margin-bottom: .5rem;
   }
 
   @media (min-width: 1024px) {
@@ -182,7 +183,7 @@
         content: "Holiday season is here!";
     }
 
-    50% {
+    45% {
         content: "Gifts that everyone will love.";
     }
 
