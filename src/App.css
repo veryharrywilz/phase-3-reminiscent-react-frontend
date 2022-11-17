@@ -1,5 +1,4 @@
 /* Logo */
-
 .logo {
     background-color: #f2f1f1;
     text-align: left;
@@ -11,10 +10,8 @@
     max-height: 135px;
     min-width: 200px;
   }
-
-
+  
   /* Candle Card */
-
   .candleCard {
     float: left;
       font-family: "Bell Gothic Std";
@@ -213,7 +210,6 @@
   min-height: 900px;
   width: calc(32% - 1rem);
 }
-
 .banner-image {
   transition: opacity 0.5s ease-out;
   animation: moveSlideshow 15s linear infinite;
