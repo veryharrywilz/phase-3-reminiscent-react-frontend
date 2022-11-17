@@ -82,21 +82,29 @@
     height: 240px;
     font-family: "Bell Gothic Std";
     padding: 20px;
-    width: 150px;
+    width: 209px;
+    margin: 8px;;
   }
 
   .candleForm select {
     margin-right: 10px;
-    height: 25px;
+    height: 30px;
     font-family: "Bell Gothic Std";
     margin-top: 10px;
+    font-size: 14.5px;
   }
 
   .candleForm button {
     font-family: "Bell Gothic Std";
-    border-style: default;
+    border-style: solid;
     border-color: #838383;
     margin-top: 10px;
+    border-radius: 15px;
+    font-size: 16px;
+  }
+  .candleForm button:hover{
+    background-color: #595959;
+    color: white;
   }
 
   .candleForm input {
