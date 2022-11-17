@@ -1,3 +1,5 @@
+/* Logo */
+
 .logo {
     background-color: #f2f1f1;
     text-align: left;
@@ -5,18 +7,23 @@
     padding-left: 70px;
     
   }
-
-.displayCandles{
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-
   .logo-image {
     max-height: 135px;
     min-width: 200px;
   }
+  .logo-image {
+    max-height: 135px;
+    min-width: 200px;
+  }
+
+.displayCandles{
+  display: flex;
+  /* align-items: center; */
+  /* justify-content: center; */
+}
+
+
+  /* Candle Card */
 
   .candleCard {
     display: grid;
@@ -31,6 +38,12 @@
     border-radius: 15px 50px 30px 5px;
   }
 
+  .candleHeading{
+    font-family: "Bell Gothic Std";
+    padding-top: 15px;
+    text-align: center;
+  }
+
   .candleCard img {
     width: 100%;
   }
@@ -41,6 +54,18 @@
 
   .candleCard button {
     margin-top: 0.5rem;
+  }
+
+  @media (min-width: 1024px) {
+    .candleCard {
+      width: calc(25% - 2rem);
+    }
+  }
+  
+  @media (min-width: 1200px) {
+    .candleCard {
+      width: calc(15% - 3rem);
+    }
   }
 
   .candleForm {
@@ -102,19 +127,6 @@
   }
 
 
-
-  @media (min-width: 1024px) {
-    .candleCard {
-      width: calc(25% - 2rem);
-    }
-  }
-  
-  @media (min-width: 1200px) {
-    .candleCard {
-      width: calc(15% - 3rem);
-    }
-  }
-
   .create {
     padding: 20px;
 
@@ -151,17 +163,13 @@
         content: "Can't find your favorite scent? Create a custom candle now.";
     }
 }
+ 
+/* Welcoming User */
 
 .username{
   font-family: "Bell Gothic Std";
   padding-left: 20px;
   font-style: italic;
-}
-
-.candleHeading{
-  font-family: "Bell Gothic Std";
-  padding-top: 15px;
-  text-align: center;
 }
 
  /* Moving Banner */
@@ -206,4 +214,49 @@
   padding: 10px 20px;
   color: #595959;
   background-color: #f2f1f1
+}
+
+/* Login CSS */
+.login_container{
+  width: 304px;
+  height: 300px;
+  background-color: #f2f1f1;
+  padding: 40px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 100px;
+  outline-style:groove;
+  outline-color: #e0d3d3;
+  outline-width: thin;
+  
+}
+
+.create_account_form{
+   text-align: left; 
+   padding: 20px;
+   display: flex;
+    background-color: white;
+    outline-style:groove;
+  outline-color: #e0d3d3;
+  outline-width: thin;
+}
+
+.login_form{
+  padding: 30px;
+  display: flex;
+   background-color: white;
+   text-align: center;
+   outline-style:groove;
+  outline-color: #e0d3d3;
+  outline-width: thin;
+}
+
+.login_button{
+  border-radius:20px;
+  border: none;
+  font-size: 12px;
+  font-weight: 700px;
+  padding: 5px 30px;
+  color: #f2f1f1;
+  background-color: #595959
 }
