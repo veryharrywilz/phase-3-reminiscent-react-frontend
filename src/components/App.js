@@ -50,7 +50,7 @@ function App() {
           <button className='button'>MAKE YOUR OWN</button>
         </Link>
         <Link to='/cart'>
-          <button className='button'>CART</button>
+          <button className='button' >CART</button>
         </Link>
         </div>
         <Routes>
