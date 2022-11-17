@@ -31,10 +31,10 @@ function CreateCandle({ scentData, handleSubmit, setLabelColor }) {
     return (
         <div className="create" >
             <form onSubmit={(e) => onFormSubmit(e)} className="candleForm">
-                <input type="text" placeholder='Candle Name' name='name'></input>
+                <input type="text" placeholder='Customize Name' name='name'></input>
                 <br />
                 <select name='scent1'>
-                <option>-Select a primary scent-</option>
+                <option>-Select a Base Note-</option>
                     {scentOptions}
                 </select>
                 <br />
