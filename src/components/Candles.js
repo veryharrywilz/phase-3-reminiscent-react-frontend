@@ -18,7 +18,7 @@ function Candles({ candleArr, currentUser }) {
     })
 
     return (
-        <div>
+        <div className="allCandleDiv">
             <input type="text" id="searchBar" onChange={(e) => setSearch(e.target.value)} placeholder="🔍 Search"></input>
             <CandleContainer 
             candleArr={searchArray} 
