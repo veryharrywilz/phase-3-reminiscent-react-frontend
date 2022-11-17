@@ -54,7 +54,11 @@ function CreateCandle({ scentData, handleSubmit, setLabelColor }) {
                     {scentOptions}
                 </select>
                 <br />
+
                 <button type='submit'>Create Candle</button>
+
+                <button type='submit'>Create Candle</button>
+
                 </form>
             <button className='colorPicker' id="white" onClick={() =>  setLabelColor("white")}></button>
             <button className='colorPicker' id="wheat"onClick={() => setLabelColor("wheat")}></button>
