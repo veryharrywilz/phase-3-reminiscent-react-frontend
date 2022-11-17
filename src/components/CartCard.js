@@ -2,6 +2,19 @@ import {link} from "react-router-dom"
 
 function CartCard({ candle, currentUser, setDeletedCandle }) {
 
+    let bgColor = ""
+
+    function setbgColor() {
+        if(candle.id <= 10) {
+            bgColor = "#cec2c250"
+        }
+        else {
+            bgColor = candle.color
+        }
+    }
+
+    setbgColor()
+
 
     function removeFromCart() {
         console.log(candle.id)
@@ -17,7 +30,7 @@ function CartCard({ candle, currentUser, setDeletedCandle }) {
 
 
 return (
-    <div className="candleCard" id="cartCard">
+    <div className="candleCard" id="cartCard" style={{ backgroundColor: bgColor }}>
         <h1>{candle.name}</h1>
         <img alt="Candle" src={candle.image} />
         <p>${candle.price}</p>
