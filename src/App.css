@@ -16,27 +16,22 @@
     min-width: 200px;
   }
 
-.displayCandles{
-  display: flex;
-  /* align-items: center; */
-  /* justify-content: center; */
-}
-
 
   /* Candle Card */
 
   .candleCard {
-    display: grid;
-    align-items: center;
-    font-family: "Bell Gothic Std";
-    padding-left: 20px;
-    padding-right: 20px;
-    padding-top: 5px;
-    padding-bottom: 5px;
-    background-color: #b2c0a53f;
-    margin: 1rem;
-    border-radius: 15px 50px 30px 5px;
-  }
+      display: grid;
+      float: left;
+      font-family: "Bell Gothic Std";
+      padding-left: 20px;
+      padding-right: 20px;
+      padding-top: 5px;
+      padding-bottom: 5px;
+      background-color: #b2c0a550;
+      /* height: 390px; */
+      margin: 1rem;
+      border-radius: 15px 50px 30px 5px;
+    }
 
   .candleHeading{
     font-family: "Bell Gothic Std";
