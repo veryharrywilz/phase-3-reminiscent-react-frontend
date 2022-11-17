@@ -6,8 +6,9 @@ function CreateCandle({ scentData, handleSubmit, setLabelColor }) {
     const scentOptions = scentData.map((scent) => {
         return (<option>{scent.name}</option>)
     })
-
-
+// function handleClick(e) {
+// setLabelColor(e.target.value)
+// }
     function onFormSubmit(e) {
         e.preventDefault()
         const scents = []
@@ -21,9 +22,12 @@ function CreateCandle({ scentData, handleSubmit, setLabelColor }) {
                 return true
             }
         })
-        console.log(finalScents)
+
         handleSubmit(e.target.name.value, finalScents, e.target.color.value)
         setLabelColor(e.target.color.value)
+
+        handleSubmit(e.target.name.value, finalScents)
+
     }
 
 
@@ -53,8 +57,10 @@ function CreateCandle({ scentData, handleSubmit, setLabelColor }) {
                     {scentOptions}
                 </select>
                 <br />
-                <select placeholder='Color' name="color">
-                    <option>-Select a color-</option>
+
+                {/* <select type='checkbox' placeholder='Color' name="color">
+                    <option value='' disabled selected hidden >-Select a color-</option>
+
                     <option>white</option>
                     <option>wheat</option>
                     <option>lightcoral</option>
@@ -67,9 +73,22 @@ function CreateCandle({ scentData, handleSubmit, setLabelColor }) {
                     <option>plum</option>
                     <option>violet</option>
                 </select>
-                <br />
-                <button type='submit'>Create!</button>
-            </form>
+                <br /> */}
+                <button type='submit'>Create Candle</button>
+                </form>
+            <button className='colorPicker' id="white" onClick={() =>  setLabelColor("white")}></button>
+            <button className='colorPicker' id="wheat"onClick={() => setLabelColor("wheat")}></button>
+            <button className='colorPicker' id="goldenrod" onClick={() => setLabelColor("goldenrod")}></button>
+            <button className='colorPicker' id="lightsalmon" onClick={() => setLabelColor("lightsalmon")}></button>
+            <button className='colorPicker' id="orangered" onClick={() => setLabelColor("orangered")}></button>
+            <button className='colorPicker' id="rosybrown" onClick={() => setLabelColor("rosybrown")}></button>
+            <button className='colorPicker' id="plum" onClick={() => setLabelColor("plum")}></button>
+            <button className='colorPicker' id="palevioletred" onClick={() => setLabelColor("palevioletred")}></button>
+            <button className='colorPicker' id="olive" onClick={() => setLabelColor("olive")}></button>
+            <button className='colorPicker' id="seagreen" onClick={() => setLabelColor("seagreen")}></button>
+            <button className='colorPicker' id="cornflowerblue" onClick={() => setLabelColor("cornflowerblue")}></button>
+            <button className='colorPicker' id="lightblue" onClick={() => setLabelColor("lightblue")}></button>
+            
         </div>
     )
 
