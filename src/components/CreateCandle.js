@@ -22,7 +22,7 @@ function CreateCandle({ scentData, handleSubmit, setLabelColor }) {
             }
         })
         console.log(finalScents)
-        handleSubmit(e.target.name.value, finalScents)
+        handleSubmit(e.target.name.value, finalScents, e.target.color.value)
         setLabelColor(e.target.color.value)
     }
 
@@ -54,7 +54,7 @@ function CreateCandle({ scentData, handleSubmit, setLabelColor }) {
                 </select>
                 <br />
                 <select placeholder='Color' name="color">
-                    <option value='' disabled selected hidden >-Select a color-</option>
+                    <option>-Select a color-</option>
                     <option>white</option>
                     <option>wheat</option>
                     <option>lightcoral</option>

@@ -18,7 +18,7 @@ function CandleCreator({ currentUser }) {
             })
     }, [])
 
-    function onCandleFormSubmit(name, scents) {
+    function onCandleFormSubmit(name, scents, color) {
         setLabelScents(scents)
         setLabelName(name)
         fetch('http://localhost:9292/candles', {
@@ -29,7 +29,8 @@ function CandleCreator({ currentUser }) {
                 price: 20,
                 image: "https://cb.scene7.com/is/image/Crate/ShinolaCandle3ThymeOlvBlueSSF21/$web_pdp_main_carousel_high$/210427132020/shinola-no.-3-bergamot-eucalyptus-and-amber-scented-candle.jpg",
                 scents: scents,
-                user_id: currentUser.id
+                user_id: currentUser.id,
+                color: color
             })
         })
             .then(resp => resp.json())
