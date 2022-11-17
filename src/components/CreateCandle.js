@@ -6,9 +6,7 @@ function CreateCandle({ scentData, handleSubmit, setLabelColor }) {
     const scentOptions = scentData.map((scent) => {
         return (<option>{scent.name}</option>)
     })
-// function handleClick(e) {
-// setLabelColor(e.target.value)
-// }
+
     function onFormSubmit(e) {
         e.preventDefault()
         const scents = []
@@ -16,6 +14,9 @@ function CreateCandle({ scentData, handleSubmit, setLabelColor }) {
         console.log(scents)
         const finalScents = scents.filter((scent) => {
             if( scent.includes("Select")) {
+                return false    
+            }
+            else if( scent.includes("Optional")){
                 return false
             }
             else {
@@ -39,41 +40,25 @@ function CreateCandle({ scentData, handleSubmit, setLabelColor }) {
                 </select>
                 <br />
                 <select name='scent2'>
-                <option>-Select a second scent-</option>
+                <option>-Optional-select a second scent-</option>
                     {scentOptions}
                 </select>
                 <br />
                 <select name='scent3'>
-                <option>-Select a third scent-</option>
+                <option>-Optional-select a third scent-</option>
                     {scentOptions}
                 </select>
                 <br />
                 <select name='scent4'>
-                <option>-Select a fourth scent-</option>
+                <option>-Optional-select a fourth scent-</option>
                     {scentOptions}
                 </select>
                 <br />
 
-                {/* <select type='checkbox' placeholder='Color' name="color">
-                    <option value='' disabled selected hidden >-Select a color-</option>
-=========
-                <select placeholder='Color' name="color">
-                    <option>-Select a color-</option>
->>>>>>>>> Temporary merge branch 2
-                    <option>white</option>
-                    <option>wheat</option>
-                    <option>lightcoral</option>
-                    <option>lightsalmon</option>
-                    <option>rosybrown</option>
-                    <option>forestgreen</option>
-                    <option>olive</option>
-                    <option>seagreen</option>
-                    <option>lightblue</option>
-                    <option>plum</option>
-                    <option>violet</option>
-                </select>
-                <br /> */}
-                <button type='submit' className="submitCandleButton">Create Candle</button>
+                <button type='submit'>Create Candle</button>
+
+                <button type='submit'>Create Candle</button>
+
                 </form>
             <button className='colorPicker' id="white" onClick={() =>  setLabelColor("white")}></button>
             <button className='colorPicker' id="wheat"onClick={() => setLabelColor("wheat")}></button>
