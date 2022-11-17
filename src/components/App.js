@@ -61,10 +61,10 @@ function App() {
           </Link>
         </div>
         <Routes>
-          <Route path='/' element={<Home setCart={setCart} currentUser={currentUser} />} />
+          <Route path='/' element={<Home currentUser={currentUser} />} />
           <Route path='/candlecreator' element={<CandleCreator currentUser={currentUser} />} />
           <Route path='/login' element={<Login changeUser={changeUser} />} />
-          <Route path='/cart' element={<Cart cart={cart} setCart={setCart} currentUser={currentUser} handleCandleEdit={handleCandleEdit}/>} />
+          <Route path='/cart' element={<Cart currentUser={currentUser} handleCandleEdit={handleCandleEdit}/>} />
           <Route path='/edit/candle' element={<EditCandle candleEdit={candleEdit} />}/>
         </Routes>
       </Router>
