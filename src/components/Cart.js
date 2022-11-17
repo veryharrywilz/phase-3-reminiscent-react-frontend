@@ -1,8 +1,9 @@
 import { useEffect, useState } from 'react'
 import CartCard from "./CartCard"
 
-function Cart({ currentUser, cart, setCart }) {
-const [deletedCandle, setDeletedCandle] = useState({})
+function Cart({ currentUser }) {
+    const [deletedCandle, setDeletedCandle] = useState({})
+    const [cart, setCart] = useState([])
 
     
         useEffect(() => {
@@ -15,6 +16,17 @@ const [deletedCandle, setDeletedCandle] = useState({})
                 })
             }
         }, [])
+
+        useEffect(() => {
+            if (currentUser !== null) {
+            fetch(`http://localhost:9292/users/${currentUser.id}/cart`)
+                .then(res => res.json())
+                .then(data => {
+                    setCart(data)
+                    console.log(data)
+                })
+            }
+        }, [deletedCandle])
     
 
     const cartCandleArray = cart.map((candle) => {
@@ -22,6 +34,7 @@ const [deletedCandle, setDeletedCandle] = useState({})
             <CartCard candle={candle} currentUser={currentUser} setDeletedCandle={setDeletedCandle} />
         )
     })
+
 
     return (
         <div>

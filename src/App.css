@@ -97,6 +97,10 @@
     box-shadow: 5px;
   }
 
+  #cartCard {
+    display: inline-block;
+  }
+
 
 
   @media (min-width: 1024px) {
