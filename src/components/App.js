@@ -30,7 +30,9 @@ function App() {
     <div className="App">
       <Router>
         <div className='top-banner-text'><span className='top-banner'></span></div>
-        <h1 className='logo'>Reminiscent</h1>
+        <h1 className='logo'>
+        <img className='logo-image' src="https://pbs.twimg.com/profile_images/1372890157896978435/j2EGJ0ey_400x400.jpg"/>
+        </h1>
         {currentUser? <h2 className='username'>Welcome, {currentUser.user_name}!</h2> : null}
         <div className='navbar'>
         <Link to='/'>
