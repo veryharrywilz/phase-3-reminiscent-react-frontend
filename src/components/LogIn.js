@@ -66,10 +66,10 @@ function Login({ changeUser }) {
     }
 
     return (
-        <>
+        <div className="login_container">
             <div className="login_form">
                 <form onSubmit={handleSubmit}>
-                    <label value="Username">Login:</label><br />
+                    <label value="Username">Welcome back!</label><br />
                     <input
                         type="text"
                         name="login"
@@ -85,12 +85,13 @@ function Login({ changeUser }) {
                         autoFocus={true}
                         placeholder="Password"
                     />
-                    <input type="submit" value="Login" />
+                    <br />
+                    <button className="login_button" type="submit">Login</button>
                 </form>
             </div>
             <div className="create_account_form">
                 <form onSubmit={handleCreateSubmit}>
-                    <label value="Create_account">Create Acount:</label><br />
+                    <label value="Create_account">Don't have an account? Create one now!</label><br />
                     <input
                         type="text"
                         name="username"
@@ -108,10 +109,11 @@ function Login({ changeUser }) {
                         value={createUser.password}
                         onChange={handleCreateChange}
                     />
-                    <input type="submit" value="Create Account" />
+                    <br />
+                    <button className="login_button" type="submit">Create Account</button>
                 </form>
             </div>
-        </>
+        </div>
     )
 }
 export default Login;

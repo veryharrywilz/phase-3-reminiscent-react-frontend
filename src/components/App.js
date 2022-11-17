@@ -14,8 +14,8 @@ import {
 
 function App() {
   const [currentUser, setCurrentUser] = useState(null)
-  const [cart, setCart] = useState([])
   const [candleEdit, setCandleEdit] = useState(null)
+
 
   const changeUser = (user) => {
     setCurrentUser(user)
