@@ -153,7 +153,6 @@
     position: absolute; left: 15px;
   }
 
-
   .create {
     padding: 20px;
     max-width: 300px;
@@ -394,3 +393,8 @@
     color: #090909;
 }
 
+.allCandleDiv input {
+  height: 30px;
+  width: 300px;
+  font-family: "Bell Gothic Std";
+}
