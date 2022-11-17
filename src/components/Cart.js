@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react'
 import CartCard from "./CartCard"
 
-function Cart({ currentUser, cart, setCart }) {
+function Cart({ currentUser, cart, setCart, handleCandleEdit }) {
 const [deletedCandle, setDeletedCandle] = useState({})
 
     
@@ -19,14 +19,20 @@ const [deletedCandle, setDeletedCandle] = useState({})
 
     const cartCandleArray = cart.map((candle) => {
         return (
-            <CartCard candle={candle} currentUser={currentUser} setDeletedCandle={setDeletedCandle} />
+            <CartCard candle={candle} currentUser={currentUser} setDeletedCandle={setDeletedCandle} handleCandleEdit={handleCandleEdit}/>
         )
     })
 
     return (
-        <div>
+        <>
+        {currentUser?
+            <div>
             {cartCandleArray}
         </div>
+        :
+        <h2 style={{ fontFamily: "Bell Gothic Std" }}>Please log in to see your cart</h2>
+        }
+        </>
     )
 }
 
