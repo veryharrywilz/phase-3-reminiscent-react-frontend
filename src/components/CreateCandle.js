@@ -22,12 +22,8 @@ function CreateCandle({ scentData, handleSubmit, setLabelColor }) {
                 return true
             }
         })
-
-        handleSubmit(e.target.name.value, finalScents, e.target.color.value)
-        setLabelColor(e.target.color.value)
-
+        console.log(finalScents)
         handleSubmit(e.target.name.value, finalScents)
-
     }
 
 
@@ -60,7 +56,10 @@ function CreateCandle({ scentData, handleSubmit, setLabelColor }) {
 
                 {/* <select type='checkbox' placeholder='Color' name="color">
                     <option value='' disabled selected hidden >-Select a color-</option>
-
+=========
+                <select placeholder='Color' name="color">
+                    <option>-Select a color-</option>
+>>>>>>>>> Temporary merge branch 2
                     <option>white</option>
                     <option>wheat</option>
                     <option>lightcoral</option>
