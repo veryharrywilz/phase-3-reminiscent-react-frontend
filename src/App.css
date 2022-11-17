@@ -25,8 +25,8 @@
       background-color: #cec2c250;
       margin: 1rem;
       border-radius: 15px 50px 30px 5px;
-      height: 420px;
-      width:120px;
+      height: 450px;
+      width: 150px;
     }
 
     #candleCardBG {
@@ -199,7 +199,7 @@
   font-family: "sans-serif";
   padding-left: 20px;
   font-size: 20px;
-  /* font-style: italic; */
+  font-style: italic;
 }
 
  /* Moving Banner */
@@ -242,14 +242,16 @@
   font-size: 12px;
   font-weight: 700;
   padding: 10px 20px;
-  color: #000000;
+  color: #595959;
   background-color: #f2f1f1;
 }
 
 .button:hover {
   background-color: #595959;
+  color: white;
 }
 
+/* COLORS */
 .colors{
   display: grid;
   max-width: 100px;
@@ -272,12 +274,10 @@
 #white {
   background-color: white;
 }
-
 #wheat {
   background-color: wheat;
   color: wheat;
 }
-
 #goldenrod {
   background-color: goldenrod;
   color: goldenrod;
@@ -286,7 +286,6 @@
   background-color: lightsalmon;
   color: lightsalmon;
 }
-
 #orangered {
   background-color: orangered;
   color: orangered;
@@ -295,17 +294,14 @@
   background-color: rosybrown;
   color: rosybrown;
 }
-
 #cornflowerblue {
   background-color: cornflowerblue;
   color: cornflowerblue;
 }
-
 #olive{
   background-color: olive;
   color: olive;
 }
-
 #seagreen {
   background-color: seagreen;
   color: seagreen;

@@ -6,6 +6,7 @@ function Cart({ currentUser, handleCandleEdit }) {
 
     const [deletedCandle, setDeletedCandle] = useState({})
     const [cart, setCart] = useState([])
+    const [filtered, setFiltered] = useState ([])
 
 
 
