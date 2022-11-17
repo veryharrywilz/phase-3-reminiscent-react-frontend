@@ -100,6 +100,13 @@
     }
   }
 
+  .create {
+    padding: 20px;
+
+  }
+
+  /* Top banner and animation */
+
   .top-banner-text, .hidden {
     font-family: "Magda", "sans-serif";
     font-size: 14px;
@@ -107,23 +114,6 @@
     text-align: center;
     background-color: #595959;
     color: #ffffff;
-  }
-
-  .banner {
-    height: 600px;
-    background-color: #ffffff;
-    overflow: hidden;
-   
-  }
-  .banner-image {
-    height: 100%;
-    min-height: 900px;
-    width: calc(30% - 1rem);
-  }
-
-  .create {
-    padding: 20px;
-
   }
   
   .top-banner::before {
@@ -159,9 +149,19 @@
   text-align: center;
 }
 
-/* .banner-image {
-  animation: moveSlideshow 12s linear infinite;
-} */
+ /* Moving Banner */
+
+ .banner {
+  height: 600px;
+  background-color: #ffffff;
+  overflow: hidden;
+ 
+}
+.banner-image {
+  height: 100%;
+  min-height: 900px;
+  width: calc(32% - 1rem);
+}
 
 .banner-image {
   transition: opacity 0.5s ease-out;
@@ -172,4 +172,23 @@
   100% { 
     transform: translateX(-100%);  
   }
+}
+
+/* Nav Bar and Buttons */
+
+.navbar{
+  line-height: 40px;
+  text-align: center;
+  background-color: #f2f1f1;
+  color: #ffffff;
+}
+
+.button {
+  border-radius:20px;
+  border: none;
+  font-size: 12px;
+  font-weight: 700;
+  padding: 10px 20px;
+  color: #595959;
+  background-color: #f2f1f1
 }

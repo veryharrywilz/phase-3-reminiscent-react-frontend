@@ -25,22 +25,6 @@ function App() {
   console.log(currentUser)
 
 
-
-  
-
-
-
-
-
-
-
-
-
-
-
-
-  const bannerIndex = ["Give the perfect Gift!", "Have a good holiday season!"]
-
   return (
 
     <div className="App">
@@ -48,29 +32,32 @@ function App() {
         <div className='top-banner-text'><span className='top-banner'></span></div>
         <h1 className='logo'>Reminiscent</h1>
         {currentUser? <h2 className='username'>Welcome, {currentUser.user_name}!</h2> : null}
+        <div className='navbar'>
         <Link to='/'>
-          <button>Home</button>
+          <button className='button'>HOME</button>
         </Link>
         {currentUser?
-          <button onClick={handleLogout}>
-            Logout
+          <button className='button' onClick={handleLogout}>
+            LOG OUT
           </button>
           :
           <Link to='/login'>
-            <button>Login</button>
+            <button className='button' >LOG IN</button>
           </Link>
         }
+         <Link to='/candlecreator'>
+          <button className='button'>MAKE YOUR OWN</button>
+        </Link>
         <Link to='/cart'>
-          <button>Cart</button>
+          <button className='button'>CART</button>
         </Link>
-        <Link to='/candlecreator'>
-          <button>Candle Creator</button>
-        </Link>
+        </div>
         <Routes>
           <Route path='/' element={<Home setCart={setCart} currentUser={currentUser}  />} />
+          <Route path='/candlecreator' element={<CandleCreator currentUser={currentUser} />} />
           <Route path='/login' element={<Login changeUser={changeUser}/>} />
           <Route path='/cart' element={<Cart cart={cart} setCart={setCart} currentUser={currentUser}/>} />
-          <Route path='/candlecreator' element={<CandleCreator currentUser={currentUser} />} />
+        
 
         </Routes>
       </Router>
