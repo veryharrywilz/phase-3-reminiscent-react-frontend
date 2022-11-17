@@ -1,3 +1,5 @@
+import {link} from "react-router-dom"
+
 function CartCard({ candle, currentUser, setDeletedCandle }) {
 
 
@@ -15,7 +17,7 @@ function CartCard({ candle, currentUser, setDeletedCandle }) {
 
 
 return (
-    <div className="candleCard">
+    <div className="candleCard" id="cartCard">
         <h1>{candle.name}</h1>
         <img alt="Candle" src={candle.image} />
         <p>${candle.price}</p>
