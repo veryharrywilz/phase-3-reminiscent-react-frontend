@@ -120,18 +120,6 @@
   #cartCard {
     display: inline-block;
   }
-
-  .allCandleDiv {
-    position: absolute;
-  }
-
-  .allCandleDiv input {
-    height: 40px;
-    width: 400px;
-    font-family: "Bell Gothic Std";
-  }
-
-
   .create {
     padding: 20px;
     max-width: 300px;
@@ -364,3 +352,17 @@
     color: #090909;
 }
 
+.allCandleDiv {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.allCandleDiv input {
+  height: 30px;
+  width: 300px;
+  font-family: "Bell Gothic Std";
+}
+
+.searchBar {
+position: right;
+}
