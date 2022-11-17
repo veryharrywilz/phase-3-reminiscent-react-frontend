@@ -91,7 +91,7 @@
   }
 
   .displayCandle {
-   display: flex;
+    position: relative; left: 350px; bottom: 320px;
 
   }
 
