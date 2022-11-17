@@ -11,17 +11,12 @@
     max-height: 135px;
     min-width: 200px;
   }
-  .logo-image {
-    max-height: 135px;
-    min-width: 200px;
-  }
 
 
   /* Candle Card */
 
   .candleCard {
-      display: grid;
-      float: left;
+    float: left;
       font-family: "Bell Gothic Std";
       padding-left: 20px;
       padding-right: 20px;
@@ -54,11 +49,16 @@
   }
 
   .candleCard img {
-    width: 100%;
+    width: 95%;
+    outline-style:double;
+    outline-color: #cfc4c4;
+    outline-width: thin;
+
   }
 
-  .candleCard h1 {
-    height: 55px;
+  .candleCard h2 {
+    height: 20px;
+    font-family:"Bell Gothic Std";
   }
 
   .candleCard button {
@@ -105,7 +105,7 @@
   }
 
   .displayCandle {
-    position: relative; left: 350px; bottom: 320px;
+   display: flex;
 
   }
 
@@ -148,7 +148,8 @@
 
   .create {
     padding: 20px;
-
+    max-width: 300px;
+    max-height: 300px;
   }
 
   /* Top banner and animation */
@@ -235,6 +236,80 @@
   background-color: #f2f1f1
 }
 
+.colors{
+  display: grid;
+  max-width: 100px;
+}
+.colorPicker {
+  position: relative;
+  border-radius: 50px;
+  padding: 17px;
+  margin: 3px;
+  border-style: solid;
+}
+.colorPicker:hover{
+  border-style: unset;
+  padding: 20px;
+}
+.colorPicker:focus {
+  border-style: solid;
+  border-color: black;
+}
+#white {
+  background-color: white;
+}
+
+#wheat {
+  background-color: wheat;
+  color: wheat;
+}
+
+#goldenrod {
+  background-color: goldenrod;
+  color: goldenrod;
+}
+#lightsalmon {
+  background-color: lightsalmon;
+  color: lightsalmon;
+}
+
+#orangered {
+  background-color: orangered;
+  color: orangered;
+}
+#rosybrown {
+  background-color: rosybrown;
+  color: rosybrown;
+}
+
+#cornflowerblue {
+  background-color: cornflowerblue;
+  color: cornflowerblue;
+}
+
+#olive{
+  background-color: olive;
+  color: olive;
+}
+
+#seagreen {
+  background-color: seagreen;
+  color: seagreen;
+}
+#lightblue {
+  background-color: lightblue;
+  color: lightblue;
+}
+#plum {
+  background-color: plum;
+  color: plum;
+}
+#palevioletred {
+  background-color: palevioletred;
+  color: palevioletred;
+}
+
+
 /* Login CSS */
 .login_container{
   width: 304px;
@@ -279,3 +354,27 @@
   color: #f2f1f1;
   background-color: #595959
 }
+
+/* Candle container CSS */
+.bestsellers{
+  font-family: "Magda", "sans-serif";
+    font-size:30px;
+    line-height: 30px;
+    text-align: center;
+    color: #534d4d;
+}
+.line-1 {
+  height: 1px;
+  background: black;
+  width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.new_candles_added{
+  font-family: "Magda", "sans-serif";
+    font-size:20px;
+    line-height: 20px;
+    text-align: center;
+    color: #090909;
+}
+
