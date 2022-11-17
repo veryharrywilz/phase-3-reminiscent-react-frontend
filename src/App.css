@@ -121,6 +121,16 @@
     display: inline-block;
   }
 
+  .allCandleDiv {
+    position: absolute;
+  }
+
+  .allCandleDiv input {
+    height: 40px;
+    width: 400px;
+    font-family: "Bell Gothic Std";
+  }
+
 
   .create {
     padding: 20px;
