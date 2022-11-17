@@ -107,20 +107,18 @@
     text-align: center;
     background-color: #595959;
     color: #ffffff;
-  
-    
   }
 
   .banner {
-    height: 300px;
-    padding-left: 3%;
-    background-color: #ffffff;;
-
+    height: 600px;
+    background-color: #ffffff;
+    overflow: hidden;
+   
   }
   .banner-image {
     height: 100%;
-    width: calc(17% - 1rem);
-    
+    min-height: 900px;
+    width: calc(30% - 1rem);
   }
 
   .create {
@@ -159,4 +157,19 @@
   font-family: "Bell Gothic Std";
   padding-top: 15px;
   text-align: center;
+}
+
+/* .banner-image {
+  animation: moveSlideshow 12s linear infinite;
+} */
+
+.banner-image {
+  transition: opacity 0.5s ease-out;
+  animation: moveSlideshow 15s linear infinite;
+}
+
+@keyframes moveSlideshow {
+  100% { 
+    transform: translateX(-100%);  
+  }
 }
