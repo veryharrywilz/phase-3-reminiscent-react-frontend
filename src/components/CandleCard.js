@@ -13,12 +13,14 @@ function CandleCard({ candle, currentUser }) {
     .then(data => console.log(data))
 }
 
+const candleScents = candle.scents.map((c) => c.name)
     return (
         // 
         <div className="candleCard">
             <h2 className="candleHeading" >{candle.name}</h2>
             <img alt="Candle" src={candle.image}/>
             <p>${candle.price}</p>
+            <p>{`Base notes: ${candleScents[0]}, ${candleScents[1]}, ${candleScents[2]}`}</p>
             <button onClick={() => addToCart(candle)}>Add to Cart</button>
         </div>
     )
