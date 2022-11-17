@@ -14,6 +14,7 @@ function CandleCard({ candle, currentUser }) {
 }
 
     return (
+        // 
         <div className="candleCard">
             <h2 className="candleHeading" >{candle.name}</h2>
             <img alt="Candle" src={candle.image}/>
