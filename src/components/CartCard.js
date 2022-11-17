@@ -1,6 +1,7 @@
-import {link} from "react-router-dom"
+import { Link } from "react-router-dom"
 
-function CartCard({ candle, currentUser, setDeletedCandle }) {
+function CartCard({ candle, currentUser, setDeletedCandle, handleCandleEdit }) {
+
 
     let bgColor = ""
 
@@ -28,6 +29,10 @@ function CartCard({ candle, currentUser, setDeletedCandle }) {
         setDeletedCandle(candle)
     }
 
+    function onEditClick(){
+        handleCandleEdit(candle)
+    }
+
 
 return (
     <div className="candleCard" id="cartCard" style={{ backgroundColor: bgColor }}>
@@ -35,6 +40,11 @@ return (
         <img alt="Candle" src={candle.image} />
         <p>${candle.price}</p>
         <button onClick={removeFromCart}>Remove from Cart</button>
+        {candle.id > 10?
+        <button onClick={onEditClick}><Link to='/edit/candle'>Edit This Candle</Link></button>
+        :
+        null
+        }
     </div>
 )
 }
