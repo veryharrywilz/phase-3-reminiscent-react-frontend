@@ -6,6 +6,7 @@ function Cart({ currentUser, handleCandleEdit }) {
 
     const [deletedCandle, setDeletedCandle] = useState({})
     const [cart, setCart] = useState([])
+    const [filtered, setFiltered] = useState ([])
 
 
     
@@ -20,21 +21,25 @@ function Cart({ currentUser, handleCandleEdit }) {
             }
         }, [])
 
-        useEffect(() => {
-            if (currentUser !== null) {
-            fetch(`http://localhost:9292/users/${currentUser.id}/cart`)
-                .then(res => res.json())
-                .then(data => {
-                    setCart(data)
-                    console.log(data)
-                })
-            }
-        }, [deletedCandle])
-    
+        // useEffect(() => {
+        //     if (currentUser !== null) {
+        //     fetch(`http://localhost:9292/users/${currentUser.id}/cart`)
+        //         .then(res => res.json())
+        //         .then(data => {
+        //             setCart(data)
+        //             console.log(data)
+        //         })
+        //     }
+        // }, [deletedCandle])
+
+        function removeCandle(c){
+            const filteredCart = cart.filter((candle) => candle.id != c.id)
+            setCart(filteredCart)
+        }
 
     const cartCandleArray = cart.map((candle) => {
         return (
-            <CartCard key={candle.id} candle={candle} currentUser={currentUser} setDeletedCandle={setDeletedCandle} handleCandleEdit={handleCandleEdit}/>
+            <CartCard key={candle.id} candle={candle} currentUser={currentUser} setDeletedCandle={setDeletedCandle} removeCandle={removeCandle} handleCandleEdit={handleCandleEdit}/>
 
         )
     })
