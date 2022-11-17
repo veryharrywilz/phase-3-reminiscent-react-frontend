@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom"
 
-function CartCard({ candle, currentUser, setDeletedCandle, handleCandleEdit }) {
+function CartCard({ candle, currentUser, setDeletedCandle, handleCandleEdit, removeCandle }) {
 
 
     let bgColor = ""
@@ -27,6 +27,7 @@ function CartCard({ candle, currentUser, setDeletedCandle, handleCandleEdit }) {
             .then(res => res.json())
             .then(data => console.log(data))
         setDeletedCandle(candle)
+        removeCandle(candle)
     }
 
     function onEditClick(){
