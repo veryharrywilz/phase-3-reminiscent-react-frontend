@@ -13,7 +13,6 @@ import {
 
 function App() {
   const [currentUser, setCurrentUser] = useState(null)
-  const [cart, setCart] = useState([])
 
   const changeUser = (user) => {
     setCurrentUser(user)
@@ -55,10 +54,10 @@ function App() {
         </Link>
         </div>
         <Routes>
-          <Route path='/' element={<Home setCart={setCart} currentUser={currentUser}  />} />
+          <Route path='/' element={<Home currentUser={currentUser}  />} />
           <Route path='/candlecreator' element={<CandleCreator currentUser={currentUser} />} />
           <Route path='/login' element={<Login changeUser={changeUser}/>} />
-          <Route path='/cart' element={<Cart cart={cart} setCart={setCart} currentUser={currentUser}/>} />
+          <Route path='/cart' element={<Cart currentUser={currentUser} />} />
         
 
         </Routes>
