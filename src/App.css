@@ -537,6 +537,16 @@ margin-left: 10%;
   height: 30px;
 }
 
+.alert{
+  width:20%;
+  margin: 60px auto;
+  padding:30px;
+  position:relative;
+  border-radius:5px;
+  box-shadow:0 0 15px 5px #ccc;
+  text-align: center; 
+}
+
 .edit_image{
   height: 300px;
   position: absolute;
@@ -563,3 +573,4 @@ margin-left: 10%;
 /* .candle_editor_page{
   align-content: center;
 } */
+
