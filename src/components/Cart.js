@@ -33,7 +33,7 @@ function Cart({ currentUser, handleCandleEdit }) {
         <>
             {currentUser ?
                 <>
-                    {cart.length === 0 ? <h2 style={{ fontFamily: "Bell Gothic Std" }}>Your cart is empty </h2>
+                    {cart.length === 0 ? <h3 className="alert" >There is nothing in your cart.</h3>
                         :
                         <div>
                             {cartCandleArray}
@@ -41,7 +41,7 @@ function Cart({ currentUser, handleCandleEdit }) {
                     }
                 </>
                 :
-                <h2 style={{ fontFamily: "Bell Gothic Std" }}>Please log in to see your cart</h2>
+                <h2 className="alert" style={{ fontFamily: "Bell Gothic Std" }}>Please log in to see your cart.</h2>
             }
         </>
     )

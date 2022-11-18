@@ -53,7 +53,7 @@ function CandleCreator({ currentUser }) {
                         </span>
                     </span>
                 </div>
-                : <h2 style={{ fontFamily: "Bell Gothic Std" }}>Please log in to use the Candle Creator feature</h2>}
+                : <h2 style={{ fontFamily: "Bell Gothic Std" }} className="alert" >Please log in to use the Candle Creator feature</h2>}
         </div>
     )
 }
