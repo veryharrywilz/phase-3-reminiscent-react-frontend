@@ -2,7 +2,10 @@ import { useState } from 'react';
 import { useNavigate } from 'react-router-dom'
 
 function Login({ changeUser }) {
-    const [userLogin, setUserLogin] = useState("")
+    const [userLogin, setUserLogin] = useState({
+        username: "",
+        password: ""
+    })
     const [createUser, setCreateUser] = useState({
         username: "",
         password: ""
@@ -10,26 +13,41 @@ function Login({ changeUser }) {
 
     let navigate = useNavigate()
 
-    function findCurrentUser(username) {
-        fetch(`http://localhost:9292/users/${username}`)
+    function findCurrentUser(user) {
+        if(userLogin.username === "" || userLogin.password === ""){
+            alert("Please fill out both fields before hitting enter")
+            setUserLogin({
+                username: "",
+                password: ""
+            })
+        }else{
+        fetch(`http://localhost:9292/users/${user.username}/${user.password}/login`)
             .then(res => res.json())
             .then(data => {
                 if ('message' in data) {
                     alert(data.message)
+                    setUserLogin({
+                        username: "",
+                        password: ""
+                    })
                 }
                 else {
                     changeUser(data)
                     navigate('/')
                 }
             })
+        }
     }
     function handleSubmit(e) {
         e.preventDefault()
-        // console.log("submited")
+        //console.log("submited")
         findCurrentUser(userLogin)
     }
     function handleChange(e) {
-        setUserLogin(e.target.value)
+        const { name, value } = e.target
+
+        setUserLogin({ ...userLogin, [name]: value })
+        //setUserLogin(e.target.value)
     }
 
     function handleCreateChange(e) {
@@ -72,8 +90,8 @@ function Login({ changeUser }) {
                     <label value="Username">Welcome back!</label><br />
                     <input
                         type="text"
-                        name="login"
-                        value={userLogin}
+                        name="username"
+                        value={userLogin.username}
                         onChange={handleChange}
                         autoFocus={true}
                         placeholder="Username"
@@ -81,7 +99,9 @@ function Login({ changeUser }) {
                     <br />
                     <input
                         type="password"
-                        name="login"
+                        name="password"
+                        value={userLogin.password}
+                        onChange={handleChange}
                         autoFocus={true}
                         placeholder="Password"
                     />

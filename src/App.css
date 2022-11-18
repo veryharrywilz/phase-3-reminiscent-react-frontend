@@ -1,237 +1,251 @@
 /* Logo */
 .logo {
-    background-color: #f2f1f1;
-    text-align: left;
-    max-height: 125px;
-    padding-left: 70px;
-    
-  }
-  .logo-image {
-    max-height: 135px;
-    min-width: 200px;
-  }
-  
-  /* Candle Card */
+  background-color: #f2f1f1;
+  text-align: left;
+  max-height: 125px;
+  padding-left: 70px;
+
+}
+
+.logo-image {
+  max-height: 135px;
+  min-width: 200px;
+}
+
+/* Candle Card */
+.candleCard {
+  float: left;
+  max-height: 370px;
+  min-width: 320px;
+  font-family: "Bell Gothic Std";
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  background-color: #cec2c250;
+  margin: 1rem;
+  border-radius: 15px 70px 30px 5px;
+}
+
+#candleCardBG {
+  display: grid;
+  float: left;
+  font-family: "Bell Gothic Std";
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  margin: 1rem;
+  opacity: 70%;
+}
+
+.candleHeading {
+  font-family: "Bell Gothic Std";
+  padding-top: 10px;
+  text-align: center;
+}
+
+.candleCard img {
+  width: 50%;
+  float: right;
+  outline-style: double;
+  outline-color: #cfc4c4;
+  outline-width: thin;
+  border-radius: 50px 50px 50px 50px
+}
+
+.candleCard h2 {
+  height: 37px;
+  font-family: "Bell Gothic Std";
+}
+
+.candleCard button {
+  border-radius: 10px;
+  border-color: white;
+  font-size: 12px;
+  font-weight: 700px;
+  padding: 10px 10px;
+  color: #f2ebeb;
+  background-color: #276e1daf;
+}
+
+@media (min-width: 1024px) {
   .candleCard {
-      float: left;
-      max-height: 370px;
-      min-width: 320px;
-      font-family: "Bell Gothic Std";
-      padding-left: 20px;
-      padding-right: 20px;
-      padding-top: 5px;
-      padding-bottom: 5px;
-      background-color: #cec2c250;
-      margin: 1rem;
-      border-radius: 15px 70px 30px 5px;
-    }
-
-    #candleCardBG {
-      display: grid;
-      float: left;
-      font-family: "Bell Gothic Std";
-      padding-left: 20px;
-      padding-right: 20px;
-      padding-top: 5px;
-      padding-bottom: 5px;
-      margin: 1rem;
-      opacity: 70%;
-    }
-
-  .candleHeading{
-    font-family: "Bell Gothic Std";
-    padding-top: 10px;
-    text-align: center;
+    width: calc(25% - 2rem);
   }
+}
 
-  .candleCard img {
-    width: 50%;
-    float: right;
-    outline-style:double;
-    outline-color: #cfc4c4;
-    outline-width: thin;
-    border-radius: 50px 50px 50px 50px
-
+@media (min-width: 1200px) {
+  .candleCard {
+    width: calc(15% - 3rem);
   }
+}
 
-  .candleCard h2 {
-    height: 37px;
-    font-family:"Bell Gothic Std";
-  }
+.candleForm {
+  background-color: #f2f1f1;
+  height: 240px;
+  font-family: "Bell Gothic Std";
+  padding: 20px;
+  width: 209px;
+  margin: 8px;
+  ;
+}
 
-  .candleCard button {
-    border-radius:10px;
-    border-color: white;
-    font-size: 12px;
-    font-weight: 700px;
-    padding: 10px 10px;
-    color: #f2ebeb;
-    background-color: #276e1daf;
-  }
+.candleForm select {
+  margin-right: 10px;
+  height: 30px;
+  font-family: "Bell Gothic Std";
+  margin-top: 10px;
+  font-size: 14.5px;
+}
 
-  @media (min-width: 1024px) {
-    .candleCard {
-      width: calc(25% - 2rem);
-    }
-  }
-  
-  @media (min-width: 1200px) {
-    .candleCard {
-      width: calc(15% - 3rem);
-    }
-  }
+.candleForm button {
+  font-family: "Bell Gothic Std";
+  border-style: solid;
+  border-color: #838383;
+  margin-top: 10px;
+  border-radius: 15px;
+  font-size: 16px;
+}
 
-  .candleForm {
-    background-color: #f2f1f1;
-    height: 240px;
-    font-family: "Bell Gothic Std";
-    padding: 20px;
-    width: 209px;
-    margin: 8px;;
-  }
+.candleForm button:hover {
+  background-color: #595959;
+  color: white;
+}
 
-  .candleForm select {
-    margin-right: 10px;
-    height: 30px;
-    font-family: "Bell Gothic Std";
-    margin-top: 10px;
-    font-size: 14.5px;
-  }
+.candleForm input {
+  margin-right: 10px;
+  height: 19px;
+}
 
-  .candleForm button {
-    font-family: "Bell Gothic Std";
-    border-style: solid;
-    border-color: #838383;
-    margin-top: 10px;
-    border-radius: 15px;
-    font-size: 16px;
-  }
-  .candleForm button:hover{
-    background-color: #595959;
-    color: white;
-  }
+.displayCandle {
+  position: relative;
+  left: 350px;
+  bottom: 320px;
 
-  .candleForm input {
-    margin-right: 10px;
-    height: 19px;
-  }
+}
 
-  .displayCandle {
-    position: relative; left: 350px; bottom: 320px;
+#candleFlicker {
+  height: 110px;
+  position: relative;
+  top: 88px;
+  left: 357px;
+  opacity: 60%;
+  z-index: 1;
+}
 
-  }
+#candleCreatorImage {
+  width: 600px;
+  position: absolute;
+}
 
-  #candleFlicker {
-    height: 110px;
-    position: relative; top:88px; left:357px;
-    opacity: 60%;
-    z-index: 1;
-  }
+#candleCreatorLabel {
+  display: block;
+  width: 200px;
+  height: 100px;
+  text-align: center;
+  position: relative;
+  top: 150px;
+  left: 310px;
+  opacity: 40%;
+  border-radius: 20px;
+  box-shadow: 5px;
+}
 
-  #candleCreatorImage {
-    width: 600px;
-    position: absolute;
-  }
+#cartCard {
+  display: inline-block;
+}
 
-  #candleCreatorLabel {
-    display:block; width:200px; height:100px;
-    text-align: center;
-    position: relative; top:150px; left:310px;
-    opacity: 40%;
-    border-radius: 20px;
-    box-shadow: 5px;
-  }
+.allCandleDiv {
+  position: absolute;
+}
 
-  #cartCard {
-    display: inline-block;
-  }
+/* SEARCH BAR */
+.allCandleDiv input {
+  height: 40px;
+  width: 400px;
+  font-family: "Bell Gothic Std";
+  position: absolute;
+  left: 15px;
+}
 
-  .allCandleDiv {
-    position: absolute;
-  }
+.create {
+  padding: 20px;
+  max-width: 300px;
+  max-height: 300px;
+}
 
-  /* SEARCH BAR */
-  .allCandleDiv input {
-    height: 40px;
-    width: 400px;
-    font-family: "Bell Gothic Std";
-    position: absolute; left: 15px;
-  }
+/* Top banner and animation */
 
-  .create {
-    padding: 20px;
-    max-width: 300px;
-    max-height: 300px;
-  }
+.top-banner-text,
+.hidden {
+  font-family: "Magda", "sans-serif";
+  font-size: 14px;
+  line-height: 30px;
+  text-align: center;
+  background-color: #595959;
+  color: #ffffff;
+}
 
-  /* Top banner and animation */
-
-  .top-banner-text, .hidden {
-    font-family: "Magda", "sans-serif";
-    font-size: 14px;
-    line-height: 30px;
-    text-align: center;
-    background-color: #595959;
-    color: #ffffff;
-  }
-  
-  .top-banner::before {
-    content: "Reminiscent NYC, now open.";
-    animation: animate infinite 7s;
-    padding-left: 10px;
+.top-banner::before {
+  content: "Reminiscent NYC, now open.";
+  animation: animate infinite 7s;
+  padding-left: 10px;
 }
 
 @keyframes animate {
 
-    0% {
-        content: "Holiday season is here!";
-    }
+  0% {
+    content: "Holiday season is here!";
+  }
 
-    45% {
-        content: "Gifts that everyone will love.";
-    }
+  45% {
+    content: "Gifts that everyone will love.";
+  }
 
-    75% {
-        content: "Can't find your favorite scent? Create a custom candle now.";
-    }
+  75% {
+    content: "Can't find your favorite scent? Create a custom candle now.";
+  }
 }
- 
+
 /* Welcoming User */
 
-.username{
+.username {
   font-family: "sans-serif";
   padding-left: 20px;
   font-size: 20px;
   font-style: italic;
 }
 
- /* Moving Banner */
+/* Moving Banner */
 
- .banner {
+.banner {
   height: 600px;
   background-color: #ffffff;
   overflow: hidden;
- 
+
 }
+
 .banner-image {
   height: 100%;
   min-height: 900px;
   width: calc(32% - 1rem);
 }
+
 .banner-image {
   transition: opacity 0.5s ease-out;
   animation: moveSlideshow 15s linear infinite;
 }
 
 @keyframes moveSlideshow {
-  100% { 
-    transform: translateX(-100%);  
+  100% {
+    transform: translateX(-100%);
   }
 }
 
 /* Nav Bar and Buttons */
 
-.navbar{
+.navbar {
   line-height: 40px;
   text-align: center;
   background-color: #f2f1f1;
@@ -239,7 +253,7 @@
 }
 
 .button {
-  border-radius:20px;
+  border-radius: 20px;
   border: none;
   font-size: 12px;
   font-weight: 700;
@@ -254,10 +268,11 @@
 }
 
 /* COLORS */
-.colors{
+.colors {
   display: grid;
   max-width: 100px;
 }
+
 .colorPicker {
   position: relative;
   border-radius: 50px;
@@ -265,57 +280,71 @@
   margin: 3px;
   border-style: solid;
 }
-.colorPicker:hover{
+
+.colorPicker:hover {
   border-style: unset;
   padding: 20px;
 }
+
 .colorPicker:focus {
   border-style: solid;
   border-color: black;
 }
+
 #white {
   background-color: white;
 }
+
 #wheat {
   background-color: wheat;
   color: wheat;
 }
+
 #goldenrod {
   background-color: goldenrod;
   color: goldenrod;
 }
+
 #lightsalmon {
   background-color: lightsalmon;
   color: lightsalmon;
 }
+
 #orangered {
   background-color: orangered;
   color: orangered;
 }
+
 #rosybrown {
   background-color: rosybrown;
   color: rosybrown;
 }
+
 #cornflowerblue {
   background-color: cornflowerblue;
   color: cornflowerblue;
 }
-#olive{
+
+#olive {
   background-color: olive;
   color: olive;
 }
+
 #seagreen {
   background-color: seagreen;
   color: seagreen;
 }
+
 #lightblue {
   background-color: lightblue;
   color: lightblue;
 }
+
 #plum {
   background-color: plum;
   color: plum;
 }
+
 #palevioletred {
   background-color: palevioletred;
   color: palevioletred;
@@ -323,7 +352,7 @@
 
 
 /* Login CSS */
-.login_container{
+.login_container {
   width: 304px;
   height: 300px;
   background-color: #f2f1f1;
@@ -331,34 +360,34 @@
   margin-left: auto;
   margin-right: auto;
   margin-top: 100px;
-  outline-style:groove;
+  outline-style: groove;
   outline-color: #e0d3d3;
   outline-width: thin;
-  
+
 }
 
-.create_account_form{
-   text-align: left; 
-   padding: 20px;
-   display: flex;
-    background-color: white;
-    outline-style:groove;
+.create_account_form {
+  text-align: left;
+  padding: 20px;
+  display: flex;
+  background-color: white;
+  outline-style: groove;
   outline-color: #e0d3d3;
   outline-width: thin;
 }
 
-.login_form{
+.login_form {
   padding: 30px;
   display: flex;
-   background-color: white;
-   text-align: center;
-   outline-style:groove;
+  background-color: white;
+  text-align: center;
+  outline-style: groove;
   outline-color: #e0d3d3;
   outline-width: thin;
 }
 
-.login_button{
-  border-radius:20px;
+.login_button {
+  border-radius: 20px;
   border: none;
   font-size: 12px;
   font-weight: 700px;
@@ -366,18 +395,20 @@
   color: #f2f1f1;
   background-color: #797979
 }
+
 .login_button:hover {
   background-color: #595959;
 }
 
 /* Candle container CSS */
-.bestsellers{
+.bestsellers {
   font-family: "Magda", "sans-serif";
-    font-size:30px;
-    line-height: 30px;
-    text-align: center;
-    color: #534d4d;
+  font-size: 30px;
+  line-height: 30px;
+  text-align: center;
+  color: #534d4d;
 }
+
 .line-1 {
   height: 1px;
   background: black;
@@ -385,16 +416,24 @@
   margin-left: auto;
   margin-right: auto;
 }
-.new_candles_added{
+
+.new_candles_added {
   font-family: "Magda", "sans-serif";
-    font-size:20px;
-    line-height: 20px;
-    text-align: center;
-    color: #090909;
+  font-size: 20px;
+  line-height: 20px;
+  text-align: center;
+  color: #090909;
 }
 
 .allCandleDiv input {
   height: 30px;
   width: 300px;
   font-family: "Bell Gothic Std";
+}
+
+.edit_color_block{
+  display: block;
+  width: 200px;
+  height: 200px;
+  text-align: center;
 }
