@@ -6,10 +6,12 @@ function Candles({ candleArr, currentUser }) {
     const [search, setSearch] = useState("")
 
     let searchArray = candleArr.filter((candle) => {
+        const scentArray = candle.scents.map((scent) => scent.name).join('').toLowerCase()
+        console.log(scentArray)
         if(search === "") {
             return true
         }
-        else if (candle.name.toLowerCase().includes(search.toLowerCase()) === true) {
+        else if (scentArray.includes(search.toLowerCase()) === true) {
             return true
         }
         else {
@@ -19,7 +21,7 @@ function Candles({ candleArr, currentUser }) {
 
     return (
         <div className="allCandleDiv">
-            <input type="text" id="searchBar" onChange={(e) => setSearch(e.target.value)} placeholder="🔍 Search"></input>
+            <input type="text" id="searchBar" onChange={(e) => setSearch(e.target.value)} placeholder="🔍 Search by scent..."></input>
             <CandleContainer 
             candleArr={searchArray} 
             currentUser={currentUser} />
