@@ -5,8 +5,7 @@ import CartCard from "./CartCard"
 function Cart({ currentUser, handleCandleEdit }) {
 
     const [cart, setCart] = useState([])
-    // const [deletedCandle, setDeletedCandle] = useState({})
-    // const [filtered, setFiltered] = useState([])
+
 
 
 
@@ -16,26 +15,11 @@ function Cart({ currentUser, handleCandleEdit }) {
                 .then(res => res.json())
                 .then(data => {
                     setCart(data)
-                    // console.log(data)
+
                 })
         }
     }, [])
 
-    // useEffect(() => {
-    //     if (currentUser !== null) {
-    //     fetch(`http://localhost:9292/users/${currentUser.id}/cart`)
-    //         .then(res => res.json())
-    //         .then(data => {
-    //             setCart(data)
-    //             console.log(data)
-    //         })
-    //     }
-    // }, [deletedCandle])
-
-    // function removeCandle(c) {
-    //     const filteredCart = cart.filter((candle) => candle.id != c.id)
-    //     setCart(filteredCart)
-    // }
 
     const cartCandleArray = cart.map((candle) => {
         return (

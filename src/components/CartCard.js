@@ -15,34 +15,32 @@ function CartCard({ candle, currentUser, handleCandleEdit }) {
     setbgColor()
 
     function removeFromCart(e) {
-        // console.log(candle.id)
-        // console.log(currentUser.id)
         fetch(`http://localhost:9292/users/${currentUser.id}/${candle.id}/cart`, {
             method: 'DELETE',
             headers: { 'content-type': 'application/json' },
         })
             .then(res => res.json())
-            // .then(data => console.log(data))
         e.target.parentNode.remove()
-        // setDeletedCandle(candle)
-        // removeCandle(candle)
+
     }
 
     function onEditClick() {
         handleCandleEdit(candle)
     }
 
-    const candleScents = candle.scents.map((c) => c.name)
-
+    const candleScents = candle.scents.filter((c) => c.name)
+    const getScent = candleScents.map((scent) => scent.name)
+    const renderScents = getScent.join(", ")
+    
     return (
         <div className="candleCard" id="cartCard" style={{ backgroundColor: bgColor }}>
             <h1>{candle.name}</h1>
             <img className="cartImage" alt="Candle" src={candle.image} />
             <p>${candle.price}</p>
-            <p>{`Top Notes: ${candleScents[0]}, ${candleScents[1]}, ${candleScents[2]}`}</p>
+            <p>{`Top Notes: ${renderScents}`}</p>
             <button onClick={removeFromCart}>Remove from Cart</button>
             {candle.id > 10 ?
-                <button onClick={onEditClick}><Link to='/edit/candle'>Edit This Candle</Link></button>
+                <button className="edit_button" onClick={onEditClick}><Link to='/edit/candle'>Edit This Candle</Link></button>
                 :
                 null
             }
