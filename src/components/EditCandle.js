@@ -120,7 +120,7 @@ function EditCandle({ candleEdit }) {
                 </div>
                 <img alt='candle' className="edit_image" src="https://cb.scene7.com/is/image/Crate/ShinolaCandle3ThymeOlvBlueSSF21/$web_pdp_main_carousel_high$/210427132020/shinola-no.-3-bergamot-eucalyptus-and-amber-scented-candle.jpg" />
                 <span className="edit_color_block" style={{ backgroundColor: labelColor }}>
-                    Candle Color
+                          
                 </span>
             </div>
         )
