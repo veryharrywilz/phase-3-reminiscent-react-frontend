@@ -19,8 +19,8 @@ const candleScents = candle.scents.map((c) => c.name)
         <div className="candleCard">
             <h2 className="candleHeading" >{candle.name}</h2>
             <img alt="Candle" src={candle.image}/>
-            <p>${candle.price}</p>
             <p>{`Top Notes: ${candleScents[0]}, ${candleScents[1]}, ${candleScents[2]}`}</p>
+            <p>${candle.price}</p>
             <button onClick={() => addToCart(candle)}>Add to Cart</button>
         </div>
     )
