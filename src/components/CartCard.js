@@ -37,7 +37,7 @@ function CartCard({ candle, currentUser, handleCandleEdit }) {
     return (
         <div className="candleCard" id="cartCard" style={{ backgroundColor: bgColor }}>
             <h1>{candle.name}</h1>
-            <img alt="Candle" src={candle.image} />
+            <img className="cartImage" alt="Candle" src={candle.image} />
             <p>${candle.price}</p>
             <p>{`Top Notes: ${candleScents[0]}, ${candleScents[1]}, ${candleScents[2]}`}</p>
             <button onClick={removeFromCart}>Remove from Cart</button>
