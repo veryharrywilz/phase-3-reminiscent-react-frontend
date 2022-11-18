@@ -63,7 +63,7 @@ function EditCandle({ candleEdit }) {
 
     if ('scents' in currentCandle) {
         return (
-            <>
+            <div className="candle_editor_page">
                 <div className="edit_candle">
                     <h2>Edit Your Candle</h2>
                     <form className="candleForm" onSubmit={handleUpdate}>
@@ -118,10 +118,11 @@ function EditCandle({ candleEdit }) {
                     <button className='colorPicker' id="lightblue" onClick={() => setLabelColor("lightblue")}></button>
 
                 </div>
-                <div className="edit_color_block" style={{ backgroundColor: labelColor }}>
+                <img alt='candle' className="edit_image" src="https://cb.scene7.com/is/image/Crate/ShinolaCandle3ThymeOlvBlueSSF21/$web_pdp_main_carousel_high$/210427132020/shinola-no.-3-bergamot-eucalyptus-and-amber-scented-candle.jpg" />
+                <span className="edit_color_block" style={{ backgroundColor: labelColor }}>
                     Candle Color
-                </div>
-            </>
+                </span>
+            </div>
         )
     }
     else {
