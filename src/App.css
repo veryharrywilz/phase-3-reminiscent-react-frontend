@@ -428,37 +428,60 @@ margin-left: 10%;
 
 /* Login CSS */
 .login_container {
-  width: 304px;
-  height: 300px;
+  display: grid;
+  grid-template-areas: 
+  "c" "a" "b" "c"
+  "c" "a" "b" "c"
+  ;
+  height: 400px; 
   background-color: #f2f1f1;
-  padding: 40px;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 100px;
-  outline-style: groove;
-  outline-color: #e0d3d3;
-  outline-width: thin;
+  grid-template-columns: 2fr 2fr;
+  background-image: url("https://img.freepik.com/premium-photo/eucalyptus-branches-beige-background-place-text-green-eucalyptus-leaves-isolated-neutral-color-floral-layout-horizontal-banner-mockup-eucalyptus-gunnii-silver-drop-flat-lay-top-view_497537-979.jpg?w=1800");
+
 
 }
 
 .create_account_form {
-  text-align: left;
-  padding: 20px;
-  display: flex;
+  font-family: sans-serif;
+  grid-area: "b";
+  text-align: center;
+  font-size: large;
+  padding-top: 15px;
+  margin-top: 10%;
+  margin-right: 30%;
+  margin-left: 5%;
+  margin-bottom: 20%;
   background-color: white;
   outline-style: groove;
-  outline-color: #e0d3d3;
+  outline-color: #276e1daf;
   outline-width: thin;
+}
+.create_account_form input {
+  font-family: sans-serif;
+  font-size: medium;
+  margin: 2px;
 }
 
 .login_form {
-  padding: 30px;
-  display: flex;
+  
+  font-family: sans-serif;
+  grid-area: "a";
+  font-size: large;
+  padding-top: 15px;
+  margin-left: 30%;
+  margin-right: 5%;
+  margin-top: 10%;
+  margin-bottom: 20%;
   background-color: white;
   text-align: center;
   outline-style: groove;
-  outline-color: #e0d3d3;
+  outline-color: #276e1daf;
   outline-width: thin;
+}
+.login_form input {
+  font-family: sans-serif;
+  font-size: medium;
+  margin: 2px;
 }
 
 .login_button {
@@ -467,12 +490,13 @@ margin-left: 10%;
   font-size: 12px;
   font-weight: 700px;
   padding: 5px 30px;
+  margin: 4px;
   color: #f2f1f1;
-  background-color: #797979
+  background-color: #276e1daf
 }
 
 .login_button:hover {
-  background-color: #595959;
+  background-color: #133a0eaf;
 }
 
 /* Candle container CSS */
