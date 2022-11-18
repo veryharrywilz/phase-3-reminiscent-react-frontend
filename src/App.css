@@ -144,6 +144,9 @@ margin-left: 10%;
   color: #f2ebeb;
   background-color: #276e1daf;
 }
+.candleCard button:hover{
+  background-color: #133a0eaf;
+}
 
 @media (min-width: 1024px) {
   .candleCard {
