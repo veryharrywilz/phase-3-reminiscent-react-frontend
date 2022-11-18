@@ -25,7 +25,7 @@ function Login({ changeUser }) {
     }
     function handleSubmit(e) {
         e.preventDefault()
-        console.log("submited")
+        // console.log("submited")
         findCurrentUser(userLogin)
     }
     function handleChange(e) {
