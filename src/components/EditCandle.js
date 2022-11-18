@@ -37,7 +37,7 @@ function EditCandle({ candleEdit }) {
             name = e.target.name.value
         }
         const finalScents = scents.filter((scent) => {
-            if (scent.includes("Select")) {
+            if (scent.includes("Optional")) {
                 return false
             }
             else {
@@ -78,7 +78,7 @@ function EditCandle({ candleEdit }) {
                             {currentCandle.scents[1] ?
                                 <option>{currentCandle.scents[1].name}</option>
                                 :
-                                <option>-Select a second scent-</option>
+                                <option>-Optional-select another scent-</option>
                             }
                             {renderScents}
                         </select>
@@ -87,7 +87,7 @@ function EditCandle({ candleEdit }) {
                             {currentCandle.scents[2] ?
                                 <option>{currentCandle.scents[2].name}</option>
                                 :
-                                <option>-Select a third scent-</option>
+                                <option>-Optional-select another scent-</option>
                             }
                             {renderScents}
                         </select>
@@ -96,7 +96,7 @@ function EditCandle({ candleEdit }) {
                             {currentCandle.scents[3] ?
                                 <option>{currentCandle.scents[3].name}</option>
                                 :
-                                <option>-Select a fourth scent-</option>
+                                <option>-Optional-select another scent-</option>
                             }
                             {renderScents}
                         </select>
@@ -118,10 +118,9 @@ function EditCandle({ candleEdit }) {
                     <button className='colorPicker' id="lightblue" onClick={() => setLabelColor("lightblue")}></button>
 
                 </div>
-                <span className="edit_candle_span">
-                <img className="edit_candle_image" alt='candle' src="https://cb.scene7.com/is/image/Crate/ShinolaCandle3ThymeOlvBlueSSF21/$web_pdp_main_carousel_high$/210427132020/shinola-no.-3-bergamot-eucalyptus-and-amber-scented-candle.jpg" />
-                
-                </span>
+                <div className="edit_color_block" style={{ backgroundColor: labelColor }}>
+                    Candle Color
+                </div>
             </>
         )
     }
