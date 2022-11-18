@@ -58,7 +58,8 @@
   width: 220px;
   margin-left: auto;
   margin-right: auto;
-  
+}
+
 a:link { text-decoration: none; }
 
 
@@ -463,4 +464,3 @@ float: left;
 .login_button:hover {
   background-color: #595959;
 }
-

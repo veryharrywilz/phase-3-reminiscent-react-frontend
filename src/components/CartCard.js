@@ -39,7 +39,7 @@ function CartCard({ candle, currentUser, handleCandleEdit }) {
             <p>${candle.price}</p>
             <p>{`Top Notes: ${renderScents}`}</p>
             <button onClick={removeFromCart}>Remove from Cart</button>
-            {candle.id > 10 ?
+            {candle.id > 12 ?
                 <button className="edit_button" onClick={onEditClick}><Link to='/edit/candle'>Edit This Candle</Link></button>
                 :
                 null
