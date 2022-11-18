@@ -1,8 +1,13 @@
 import { useEffect, useState } from "react"
+import { useNavigate } from "react-router-dom"
 
 function EditCandle({ candleEdit }) {
     const [currentCandle, setCurrentCandle] = useState([])
     const [scentOptions, setScentOptions] = useState([])
+    const [labelColor, setLabelColor] = useState(candleEdit.color)
+
+    let navigate = useNavigate()
+    //console.log(labelColor)
 
     useEffect(() => {
         fetch(`http://localhost:9292/edit/candle/${candleEdit.id}`)
@@ -48,56 +53,76 @@ function EditCandle({ candleEdit }) {
             body: JSON.stringify({
                 name: name,
                 scents: finalScents,
+                color: labelColor
             })
         })
-        .then(res => res.json())
-        .then(data => console.log(data))
+            .then(res => res.json())
+        //.then(data => console.log(data))
+        navigate('/cart')
     }
 
     if ('scents' in currentCandle) {
         return (
-            <div className="edit_candle">
-                <h2>Edit Your Candle</h2>
-                <form className="candleForm" onSubmit={handleUpdate}>
-                    <input type="text" name='name' placeholder={currentCandle.name} />
-                    <br />
-                    <select name='scent1'>
-                        <option>{currentCandle.scents[0].name}</option>
-                        {renderScents}
-                    </select>
-                    <br />
-                    <select name='scent2'>
-                        {currentCandle.scents[1] ?
-                            <option>{currentCandle.scents[1].name}</option>
-                            :
-                            <option>-Select a second scent-</option>
-                        }
-                        {renderScents}
-                    </select>
-                    <br />
-                    <select name='scent3'>
-                        {currentCandle.scents[2] ?
-                            <option>{currentCandle.scents[2].name}</option>
-                            :
-                            <option>-Select a third scent-</option>
-                        }
-                        {renderScents}
-                    </select>
-                    <br />
-                    <select name='scent4'>
-                        {currentCandle.scents[3] ?
-                            <option>{currentCandle.scents[3].name}</option>
-                            :
-                            <option>-Select a fourth scent-</option>
-                        }
-                        {renderScents}
-                    </select>
-                    <br />
-                    <br />
-                    <button type='submit'>Update</button>
-                </form>
+            <>
+                <div className="edit_candle">
+                    <h2>Edit Your Candle</h2>
+                    <form className="candleForm" onSubmit={handleUpdate}>
+                        <input type="text" name='name' placeholder={currentCandle.name} />
+                        <br />
+                        <select name='scent1'>
+                            <option>{currentCandle.scents[0].name}</option>
+                            {renderScents}
+                        </select>
+                        <br />
+                        <select name='scent2'>
+                            {currentCandle.scents[1] ?
+                                <option>{currentCandle.scents[1].name}</option>
+                                :
+                                <option>-Select a second scent-</option>
+                            }
+                            {renderScents}
+                        </select>
+                        <br />
+                        <select name='scent3'>
+                            {currentCandle.scents[2] ?
+                                <option>{currentCandle.scents[2].name}</option>
+                                :
+                                <option>-Select a third scent-</option>
+                            }
+                            {renderScents}
+                        </select>
+                        <br />
+                        <select name='scent4'>
+                            {currentCandle.scents[3] ?
+                                <option>{currentCandle.scents[3].name}</option>
+                                :
+                                <option>-Select a fourth scent-</option>
+                            }
+                            {renderScents}
+                        </select>
+                        <br />
+                        <br />
+                        <button type='submit'>Update</button>
+                    </form>
+                    <button className='colorPicker' id="white" onClick={() => setLabelColor("white")}></button>
+                    <button className='colorPicker' id="wheat" onClick={() => setLabelColor("wheat")}></button>
+                    <button className='colorPicker' id="goldenrod" onClick={() => setLabelColor("goldenrod")}></button>
+                    <button className='colorPicker' id="lightsalmon" onClick={() => setLabelColor("lightsalmon")}></button>
+                    <button className='colorPicker' id="orangered" onClick={() => setLabelColor("orangered")}></button>
+                    <button className='colorPicker' id="rosybrown" onClick={() => setLabelColor("rosybrown")}></button>
+                    <button className='colorPicker' id="plum" onClick={() => setLabelColor("plum")}></button>
+                    <button className='colorPicker' id="palevioletred" onClick={() => setLabelColor("palevioletred")}></button>
+                    <button className='colorPicker' id="olive" onClick={() => setLabelColor("olive")}></button>
+                    <button className='colorPicker' id="seagreen" onClick={() => setLabelColor("seagreen")}></button>
+                    <button className='colorPicker' id="cornflowerblue" onClick={() => setLabelColor("cornflowerblue")}></button>
+                    <button className='colorPicker' id="lightblue" onClick={() => setLabelColor("lightblue")}></button>
 
-            </div>
+                </div>
+                <span className="edit_candle_span">
+                <img className="edit_candle_image" alt='candle' src="https://cb.scene7.com/is/image/Crate/ShinolaCandle3ThymeOlvBlueSSF21/$web_pdp_main_carousel_high$/210427132020/shinola-no.-3-bergamot-eucalyptus-and-amber-scented-candle.jpg" />
+                
+                </span>
+            </>
         )
     }
     else {

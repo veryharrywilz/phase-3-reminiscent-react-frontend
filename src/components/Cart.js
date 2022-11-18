@@ -4,42 +4,42 @@ import CartCard from "./CartCard"
 
 function Cart({ currentUser, handleCandleEdit }) {
 
-    const [deletedCandle, setDeletedCandle] = useState({})
     const [cart, setCart] = useState([])
-    const [filtered, setFiltered] = useState ([])
+    // const [deletedCandle, setDeletedCandle] = useState({})
+    // const [filtered, setFiltered] = useState([])
 
 
-    
-        useEffect(() => {
-            if (currentUser !== null) {
+
+    useEffect(() => {
+        if (currentUser !== null) {
             fetch(`http://localhost:9292/users/${currentUser.id}/cart`)
                 .then(res => res.json())
                 .then(data => {
                     setCart(data)
-                    console.log(data)
+                    // console.log(data)
                 })
-            }
-        }, [])
-
-        // useEffect(() => {
-        //     if (currentUser !== null) {
-        //     fetch(`http://localhost:9292/users/${currentUser.id}/cart`)
-        //         .then(res => res.json())
-        //         .then(data => {
-        //             setCart(data)
-        //             console.log(data)
-        //         })
-        //     }
-        // }, [deletedCandle])
-
-        function removeCandle(c){
-            const filteredCart = cart.filter((candle) => candle.id != c.id)
-            setCart(filteredCart)
         }
+    }, [])
+
+    // useEffect(() => {
+    //     if (currentUser !== null) {
+    //     fetch(`http://localhost:9292/users/${currentUser.id}/cart`)
+    //         .then(res => res.json())
+    //         .then(data => {
+    //             setCart(data)
+    //             console.log(data)
+    //         })
+    //     }
+    // }, [deletedCandle])
+
+    // function removeCandle(c) {
+    //     const filteredCart = cart.filter((candle) => candle.id != c.id)
+    //     setCart(filteredCart)
+    // }
 
     const cartCandleArray = cart.map((candle) => {
         return (
-            <CartCard key={candle.id} candle={candle} currentUser={currentUser} setDeletedCandle={setDeletedCandle} removeCandle={removeCandle} handleCandleEdit={handleCandleEdit}/>
+            <CartCard key={candle.id} candle={candle} currentUser={currentUser} handleCandleEdit={handleCandleEdit} />
 
         )
     })
@@ -47,13 +47,13 @@ function Cart({ currentUser, handleCandleEdit }) {
 
     return (
         <>
-        {currentUser?
-            <div>
-            {cartCandleArray}
-        </div>
-        :
-        <h2 style={{ fontFamily: "Bell Gothic Std" }}>Please log in to see your cart</h2>
-        }
+            {currentUser ?
+                <div>
+                    {cartCandleArray}
+                </div>
+                :
+                <h2 style={{ fontFamily: "Bell Gothic Std" }}>Please log in to see your cart</h2>
+            }
         </>
     )
 }
