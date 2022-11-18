@@ -58,7 +58,8 @@
   width: 220px;
   margin-left: auto;
   margin-right: auto;
-  
+}
+
 a:link { text-decoration: none; }
 
 
@@ -473,7 +474,6 @@ margin-left: 10%;
 .login_button:hover {
   background-color: #595959;
 }
-
 
 /* Candle container CSS */
 .bestsellers {
