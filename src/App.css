@@ -550,11 +550,18 @@ margin-left: 10%;
   text-align: center; 
 }
 
+.candle_editor_page {
+  display: grid;
+}
+
 .edit_image{
-  height: 300px;
+  /* height: 300px; */
   position: absolute;
   left: 40%;
-  bottom: -10%;
+  max-width: 20%;
+  max-height: 50%;
+  margin-top: 120px;
+
 }
 
 .edit_color_block{
@@ -564,13 +571,19 @@ margin-left: 10%;
   width: 100px;
   height: 50px;
   text-align: center;
-  left: 47.25%;
-  bottom: 10%;
+  margin-top: 280px;
+  left: 47%;
   border-radius: 15px;
 }
 
 .edit_candle{
   width: 20%;
+  margin-left: 3%;
+}
+
+.edit_candle h2 {
+  text-align: left;
+  margin-left: 2%;
 }
 
 /* .candle_editor_page{
