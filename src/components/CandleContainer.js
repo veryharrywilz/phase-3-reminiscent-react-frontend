@@ -17,7 +17,9 @@ function CandleContainer({ candleArr, setCart, checkOut, currentUser }) {
             <h1  className="bestsellers">ESSENTIALS</h1>
             <div className="line-1"></div>
             <p className="new_candles_added">New Seasonal Candles added!</p>
+            <div className="candleHouse">
             {allCandles}
+            </div>
         </div>
     )
 }

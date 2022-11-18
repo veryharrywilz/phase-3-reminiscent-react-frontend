@@ -15,17 +15,13 @@ function CartCard({ candle, currentUser, handleCandleEdit }) {
     setbgColor()
 
     function removeFromCart(e) {
-        // console.log(candle.id)
-        // console.log(currentUser.id)
         fetch(`http://localhost:9292/users/${currentUser.id}/${candle.id}/cart`, {
             method: 'DELETE',
             headers: { 'content-type': 'application/json' },
         })
             .then(res => res.json())
-            // .then(data => console.log(data))
         e.target.parentNode.remove()
-        // setDeletedCandle(candle)
-        // removeCandle(candle)
+
     }
 
     function onEditClick() {

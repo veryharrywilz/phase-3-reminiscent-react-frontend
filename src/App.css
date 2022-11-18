@@ -11,10 +11,55 @@
   max-height: 135px;
   min-width: 200px;
 }
+/* Candle container CSS */
+.allCandleDiv {
+  display: grid;
+}
+
+.bestsellers {
+  font-family: "Magda", "sans-serif";
+  font-size: 30px;
+  line-height: 30px;
+  text-align: center;
+  color: #534d4d;
+}
+
+.line-1 {
+  height: 1px;
+  background: black;
+  width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.new_candles_added {
+  font-family: "Magda", "sans-serif";
+  font-size: 20px;
+  line-height: 20px;
+  text-align: center;
+  color: #090909;
+}
+
+.allCandleDiv input {
+  height: 30px;
+  width: 300px;
+  font-family: "Bell Gothic Std";
+}
+
+.edit_color_block{
+  display: block;
+  width: 200px;
+  height: 200px;
+  text-align: center;
+}
 
 /* Candle Card */
+.candleHouse {
+margin-left: 10%;
+}
+
 .candleCard {
-  float: left;
+float: left;
   max-height: 370px;
   min-width: 320px;
   font-family: "Bell Gothic Std";
@@ -214,7 +259,6 @@
   font-family: "sans-serif";
   padding-left: 20px;
   font-size: 20px;
-  font-style: italic;
 }
 
 /* Moving Banner */
@@ -400,40 +444,3 @@
   background-color: #595959;
 }
 
-/* Candle container CSS */
-.bestsellers {
-  font-family: "Magda", "sans-serif";
-  font-size: 30px;
-  line-height: 30px;
-  text-align: center;
-  color: #534d4d;
-}
-
-.line-1 {
-  height: 1px;
-  background: black;
-  width: 600px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.new_candles_added {
-  font-family: "Magda", "sans-serif";
-  font-size: 20px;
-  line-height: 20px;
-  text-align: center;
-  color: #090909;
-}
-
-.allCandleDiv input {
-  height: 30px;
-  width: 300px;
-  font-family: "Bell Gothic Std";
-}
-
-.edit_color_block{
-  display: block;
-  width: 200px;
-  height: 200px;
-  text-align: center;
-}
