@@ -506,13 +506,6 @@ margin-left: 10%;
   font-family: "Bell Gothic Std";
 }
 
-.edit_color_block{
-  display: block;
-  width: 200px;
-  height: 200px;
-  text-align: center;
-}
-
 .homePageFlickers {
   border-style: none;
   position:relative; left: 225px; top: 24px;
@@ -520,3 +513,29 @@ margin-left: 10%;
   height: 30px;
 }
 
+.edit_image{
+  height: 300px;
+  position: absolute;
+  left: 40%;
+  bottom: -10%;
+}
+
+.edit_color_block{
+  display: block;
+  position: absolute;
+  opacity: 70%;
+  width: 100px;
+  height: 50px;
+  text-align: center;
+  left: 47.25%;
+  bottom: 10%;
+  border-radius: 15px;
+}
+
+.edit_candle{
+  width: 20%;
+}
+
+/* .candle_editor_page{
+  align-content: center;
+} */
