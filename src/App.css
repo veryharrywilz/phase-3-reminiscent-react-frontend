@@ -11,6 +11,7 @@
   max-height: 135px;
   min-width: 200px;
 }
+
 /* Candle container CSS */
 .allCandleDiv {
   display: grid;
@@ -46,12 +47,13 @@
   font-family: "Bell Gothic Std";
 }
 
-.edit_color_block{
+.edit_color_block {
   display: block;
   width: 200px;
   height: 200px;
   text-align: center;
 }
+
 .line-2 {
   height: 1px;
   background: black;
@@ -60,23 +62,32 @@
   margin-right: auto;
 }
 
-a:link { text-decoration: none; }
+a:link {
+  text-decoration: none;
+}
 
 
-a:visited { text-decoration: none; }
+a:visited {
+  text-decoration: none;
+}
 
 
-a:hover { text-decoration: none; }
+a:hover {
+  text-decoration: none;
+}
 
 
-a:active { text-decoration: none; }
+a:active {
+  text-decoration: none;
+}
 
-a{
+a {
   color: white
 }
+
 /* Candle Card */
 .candleHouse {
-margin-left: 10%;
+  margin-left: 10%;
 }
 
 .candleCard {
@@ -144,7 +155,8 @@ margin-left: 10%;
   color: #f2ebeb;
   background-color: #276e1daf;
 }
-.candleCard button:hover{
+
+.candleCard button:hover {
   background-color: #133a0eaf;
 }
 
@@ -432,11 +444,11 @@ margin-left: 10%;
 /* Login CSS */
 .login_container {
   display: grid;
-  grid-template-areas: 
-  "c" "a" "b" "c"
-  "c" "a" "b" "c"
+  grid-template-areas:
+    "c" "a" "b" "c"
+    "c" "a" "b" "c"
   ;
-  height: 400px; 
+  height: 400px;
   background-color: #f2f1f1;
   grid-template-columns: 2fr 2fr;
   background-image: url("https://img.freepik.com/premium-photo/eucalyptus-branches-beige-background-place-text-green-eucalyptus-leaves-isolated-neutral-color-floral-layout-horizontal-banner-mockup-eucalyptus-gunnii-silver-drop-flat-lay-top-view_497537-979.jpg?w=1800");
@@ -459,6 +471,7 @@ margin-left: 10%;
   outline-color: #276e1daf;
   outline-width: thin;
 }
+
 .create_account_form input {
   font-family: sans-serif;
   font-size: medium;
@@ -466,7 +479,7 @@ margin-left: 10%;
 }
 
 .login_form {
-  
+
   font-family: sans-serif;
   grid-area: "a";
   font-size: large;
@@ -481,6 +494,7 @@ margin-left: 10%;
   outline-color: #276e1daf;
   outline-width: thin;
 }
+
 .login_form input {
   font-family: sans-serif;
   font-size: medium;
@@ -535,26 +549,28 @@ margin-left: 10%;
 
 .homePageFlickers {
   border-style: none;
-  position:relative; left: 225px; top: 24px;
+  position: relative;
+  left: 225px;
+  top: 24px;
   z-index: +1;
   height: 30px;
 }
 
-.alert{
-  width:20%;
+.alert {
+  width: 20%;
   margin: 60px auto;
-  padding:30px;
-  position:relative;
-  border-radius:5px;
-  box-shadow:0 0 15px 5px #ccc;
-  text-align: center; 
+  padding: 30px;
+  position: relative;
+  border-radius: 5px;
+  box-shadow: 0 0 15px 5px #ccc;
+  text-align: center;
 }
 
 .candle_editor_page {
   display: grid;
 }
 
-.edit_image{
+.edit_image {
   /* height: 300px; */
   position: absolute;
   left: 40%;
@@ -564,7 +580,7 @@ margin-left: 10%;
 
 }
 
-.edit_color_block{
+.edit_color_block {
   display: block;
   position: absolute;
   opacity: 70%;
@@ -572,12 +588,12 @@ margin-left: 10%;
   height: 50px;
   text-align: center;
   margin-top: 20%;
-  left: 47%;
+  left: 47.45%;
   border-radius: 15px;
-  
+
 }
 
-.edit_candle{
+.edit_candle {
   width: 20%;
   margin-left: 3%;
 }
@@ -590,4 +606,3 @@ margin-left: 10%;
 /* .candle_editor_page{
   align-content: center;
 } */
-
