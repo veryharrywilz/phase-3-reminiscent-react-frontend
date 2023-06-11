@@ -1,12 +1,8 @@
-# Getting Started with Create React App
+Hello! 
+Reminiscent is an application that allows users to create custom scented candles, as well as choose between Reminiscents signature scents.
+This was a group project, built with a React frontend and Rails backend. 
 
-HEY!!!!!!! -ap
-
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-
-## Available Scripts
-
-In the project directory, you can run:
+Backend Github: https://github.com/veryharrywilz/phase-3-reminiSCENT-project
 
 ### `npm start`
 
